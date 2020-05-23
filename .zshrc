@@ -142,6 +142,20 @@ export PATH=$JAVA_HOME/bin:$PATH
 # export PATH=$ANDROID_HOME/tools/bin:$PATH
 # export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
-# export GOPATH=$HOME/go
+export GOPATH=$HOME/.go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export GOTOOLDIR="${GOROOT}/pkg/tool/darwin_amd64"
+export GOARCH="amd64"
+export GOBIN=""
+export GOEXE=""
+export GOHOSTARCH="amd64"
+export GOHOSTOS="darwin"
+export GOOS="darwin"
+export GORACE=""
+export CC="clang"
+export GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/g8/551vgzq10c7bdq3k7zby5_gw0000gn/T/go-build818624631=/tmp/go-build -gno-record-gcc-switches -fno-common"
+export CXX="clang++"
+export CGO_ENABLED="1"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
