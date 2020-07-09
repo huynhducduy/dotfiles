@@ -118,11 +118,9 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-# Start an HTTP server from a directory, optionally specifying the port
+# Start an HTTP server from a directory, optionally specifying the port, require python3
 function server() {
 	local port="${1:-8000}";
 	sleep 1 && open "http://localhost:${port}/" &
-	# Set the default Content-Type to `text/plain` instead of `application/octet-stream`
-	# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
-	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port";
+	python -m http.server ${port}
 }
