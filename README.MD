@@ -1,4 +1,4 @@
-# Duy's dotfiles & Things to do with fresh masOS
+# Duy's dotfiles & Things to do with fresh macOS
 
 - Disable SIP (System Integrity Protection): [Guide](https://www.macworld.co.uk/how-to/mac/how-turn-off-mac-os-x-system-integrity-protection-rootless-3638975/)
 - Change DNS (to [1.1.1.1](https://1.1.1.1/dns/), or [Google](https://developers.google.com/speed/public-dns))
@@ -19,7 +19,7 @@ echo 'export PATH=/usr/local/mysql/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 mysql_secure_installation
 ```
-- Config iTerm2 (Comming soon...)
-- Config Google Chrome - Extensions (Comming soon...)
-- Config VSCode + Intellij IDEA - Settings, extensions... (Comming soon...)
-- Config Wireguard (to using 1.1.1.1 with WARP+ VPN)
+- Config iTerm2 (Coming soon...)
+- Config Google Chrome - Extensions (Coming soon...)
+- Config VSCode + Intellij IDEA - Settings, extensions... (Coming soon...)
+- Config Wireguard (to using 1.1.1.1 with WARP+ VPN) (Coming soon...)
