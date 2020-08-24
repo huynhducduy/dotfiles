@@ -65,3 +65,9 @@ cask "teamviewer"
 cask "telegram"
 cask "visual-studio-code"
 cask "zalo"
+mas "GoodNotes", id: 1444383602
+mas "Messenger", id: 1480068668
+mas "RunCat", id: 1429033973
+mas "Shazam", id: 897118787
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
