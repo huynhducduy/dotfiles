@@ -2,7 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-brew "autojump"
+brew "auto"
 brew "bandwhich"
 brew "coreutils"
 brew "gnutls"
@@ -32,8 +32,10 @@ brew "ssh-copy-id"
 brew "tldr"
 brew "tmux"
 brew "wget"
+brew "wifi-password"
 cask "anaconda"
 cask "authy"
+cask "blurred"
 cask "discord"
 cask "figma"
 cask "firefox"
@@ -69,8 +71,10 @@ cask "telegram"
 cask "visual-studio-code"
 cask "zalo"
 mas "GoodNotes", id: 1444383602
+mas "LyricsX", id: 1254743014
 mas "Messenger", id: 1480068668
 mas "RunCat", id: 1429033973
 mas "Shazam", id: 897118787
+mas "Spark", id: 1176895641
 mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
+mas "Xcode", id: 49779983
