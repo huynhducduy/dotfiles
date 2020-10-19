@@ -22,4 +22,3 @@ mysql_secure_installation
 - Config iTerm2 (Coming soon...)
 - Config Google Chrome - Extensions - [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Chrome-Extensions)
 - Config VSCode + Intellij IDEA - Settings, extensions... [Wiki](https://github.com/huynhducduy/dotfiles/wiki/VSCode-Extensions)
-- Config Wireguard (to using 1.1.1.1 with WARP+ VPN) [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Wireguard-Config)
