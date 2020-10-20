@@ -1,5 +1,6 @@
 # Duy's dotfiles & Things to do with fresh macOS
 
+- Import SSH Keys, GPG Keys
 - Disable SIP (System Integrity Protection): [Guide](https://www.macworld.co.uk/how-to/mac/how-turn-off-mac-os-x-system-integrity-protection-rootless-3638975/)
 - Change DNS (to [1.1.1.1](https://1.1.1.1/dns/), or [Google](https://developers.google.com/speed/public-dns))
 - Install the Xcode Command Line Tools: `xcode-select --install`
@@ -9,6 +10,7 @@
 ```
 git config --global user.name "Your Name Here"
 git config --global user.email "your_email@youremail.com"
+git config --global user.signingkey "yourgpgkey"
 ```
 - Add Anaconda to PATH: `export PATH="/usr/local/anaconda3/bin:$PATH"`
 - Install Docker from [here](https://download.docker.com/mac/stable/Docker.dmg)
