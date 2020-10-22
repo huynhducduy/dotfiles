@@ -124,3 +124,9 @@ function server() {
 	sleep 1 && open "http://localhost:${port}/" &
 	python -m http.server ${port}
 }
+
+# Generate a random string (using as secret) with given bytes
+function secret() {
+        local bytes="${1:-16}"
+        head -c $bytes </dev/urandom|xxd -p -u
+}
