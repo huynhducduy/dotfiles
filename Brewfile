@@ -1,10 +1,14 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-brew "auto"
+tap "rigellute/tap"
+brew "autojump"
 brew "bandwhich"
+brew "broot"
 brew "coreutils"
+brew "croc"
 brew "gnutls"
 brew "ffmpeg"
 brew "findutils"
@@ -31,27 +35,29 @@ brew "sqlmap"
 brew "ssh-copy-id"
 brew "tldr"
 brew "tmux"
+brew "tokei"
 brew "wget"
 brew "wifi-password"
 cask "anaconda"
 cask "authy"
-cask "blurred"
+cask "bitwarden"
 cask "discord"
 cask "figma"
 cask "firefox"
 cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 cask "google-chrome"
+cask "hazeover"
 cask "hiddenbar"
 cask "iina"
 cask "insomnia"
 cask "intellij-idea"
 cask "iterm2"
 cask "jumpcut"
-cask "logitech-options"
 cask "keepingyouawake"
 cask "keka"
 cask "keycastr"
+cask "logitech-options"
 cask "microsoft-edge"
 cask "microsoft-teams"
 cask "mysqlworkbench"
@@ -68,13 +74,15 @@ cask "spotify"
 cask "steam"
 cask "teamviewer"
 cask "telegram"
+cask "textmate"
+cask "tower"
+cask "use-engine"
 cask "visual-studio-code"
 cask "zalo"
-mas "GoodNotes", id: 1444383602
-mas "LyricsX", id: 1254743014
-mas "Messenger", id: 1480068668
-mas "RunCat", id: 1429033973
-mas "Shazam", id: 897118787
-mas "Spark", id: 1176895641
-mas "WireGuard", id: 1451685025
+mas "GoodNotes", id: 1444383602	
+mas "Messenger", id: 1480068668	
+mas "RunCat", id: 1429033973	
+mas "Shazam", id: 897118787	
+mas "Spark", id: 1176895641	
+mas "WireGuard", id: 1451685025	
 mas "Xcode", id: 49779983
