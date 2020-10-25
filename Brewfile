@@ -84,6 +84,5 @@ mas "GoodNotes", id: 1444383602
 mas "Messenger", id: 1480068668	
 mas "RunCat", id: 1429033973	
 mas "Shazam", id: 897118787	
-mas "Spark", id: 1176895641	
-mas "WireGuard", id: 1451685025	
+mas "Spark", id: 1176895641 
 mas "Xcode", id: 49779983
