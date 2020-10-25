@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/huynhducduy/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
@@ -26,24 +26,8 @@ export UPDATE_ZSH_DAYS=30
 # Use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(
-  git
-  osx
-  autojump
-  zsh-autosuggestions
-  zsh-completions
-  history-substring-search
-  last-working-dir
-  extract
-  autoupdate
-  zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -61,8 +45,30 @@ export MANPAGER='less -X';
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+autoload -U compinit && compinit
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+plugins=(
+  git
+  osx
+  autojump
+  fzf-tab
+  zsh-autosuggestions
+  zsh-completions
+  history-substring-search
+  last-working-dir
+  extract
+  autoupdate
+  zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
 
 export PATH="/usr/local/sbin:$PATH"
 
@@ -79,9 +85,6 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-indent/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-autoload -U compinit && compinit
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -109,8 +112,6 @@ export GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments
 export CXX="clang++"
 export CGO_ENABLED="1"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Update macos software & brew
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew cask upgrade; npm install npm -g; npm update -g;'
 
@@ -127,6 +128,12 @@ function server() {
 
 # Generate a random string (using as secret) with given bytes
 function secret() {
-        local bytes="${1:-16}"
-        head -c $bytes </dev/urandom|xxd -p -u
+	local bytes="${1:-16}"
+	head -c $bytes </dev/urandom|xxd -p -u
 }
+
+# HSTR configuration - add this to ~/.zshrc
+alias hh=hstr                    # hh to be alias for hstr
+setopt histignorespace           # skip cmds w/ leading space from history
+export HSTR_CONFIG=hicolor       # get more colors
+bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
