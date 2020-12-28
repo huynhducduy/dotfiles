@@ -6,3 +6,7 @@
 [user]
 	name = Huynh Duc Duy
 	email = duuuuuuuuy@gmail.com
+[commit]
+	gpgsign = true
+[help]
+	autocorrect = 1
