@@ -1,8 +1,6 @@
-# Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
-
 SPACESHIP_PROMPT_ADD_NEWLINE="false"
 
 # CASE_SENSITIVE="true"
@@ -14,36 +12,10 @@ SPACESHIP_PROMPT_ADD_NEWLINE="false"
 # DISABLE_AUTO_TITLE="true"
 # ENABLE_CORRECTION="true"
 # COMPLETION_WAITING_DOTS="true"
-export UPDATE_ZSH_DAYS=30
-
-# If you want to disable marking untracked files under VCS as dirty.
-# This makes repository status check for large repositories faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Custom time format using the strftime function format specifications,
 # HIST_STAMPS="mm/dd/yyyy"
-
-# Use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Prefer US English and use UTF-8.
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
-
-# Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X';
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export UPDATE_ZSH_DAYS=30
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 autoload -U compinit && compinit
@@ -53,22 +25,41 @@ autoload -U compinit && compinit
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
+  autoupdate
   git
   osx
+  last-working-dir
+  extract
   autojump
   fzf-tab
   zsh-autosuggestions
   zsh-completions
-  history-substring-search
-  last-working-dir
-  extract
-  autoupdate
   zsh-syntax-highlighting
+  history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';
+
+# Prefer US English and use UTF-8.
+export LANG='en_US.UTF-8';
+export LC_ALL='en_US.UTF-8';
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
 
 export PATH="/usr/local/sbin:$PATH"
 
