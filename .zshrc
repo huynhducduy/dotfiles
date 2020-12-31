@@ -103,8 +103,8 @@ export GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments
 export CXX="clang++"
 export CGO_ENABLED="1"
 
-# Update macos software & brew
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew cask upgrade; npm install npm -g; npm update -g;'
+# Update macos software & brew & nodejs packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask; brew cleanup; npm install npm -g; npm update -g;'
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
