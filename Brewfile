@@ -41,7 +41,7 @@ brew "wget"
 brew "wifi-password"
 cask "anaconda"
 cask "authy"
-cask "cloudflare-warp"
+cask "dashlane"
 cask "discord"
 cask "figma"
 cask "firefox-developer-edition"
@@ -80,6 +80,6 @@ cask "tower"
 cask "typora"
 cask "visual-studio-code"
 cask "zalo"
-mas "Messenger", id: 1480068668
-mas "RunCat", id: 1429033973
+mas "Messenger", id: 1480068668	
+mas "RunCat", id: 1429033973	
 mas "Shazam", id: 897118787
