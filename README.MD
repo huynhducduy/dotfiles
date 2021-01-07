@@ -61,7 +61,7 @@ mysql_secure_installation
 - Config `Openkey` - especially the `modern icon` which fit with macOS Big Sur
 - Config `Pock` - especially the `Now Playing Widget` which is very helpful
 - Open all apps and verify, then check for startup apps.
-- Perform some useful commandline script: [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Awesome-macOS-command-line-scripts)
+- Perform some tweak to the macOS: 'sh ./osx.sh'
 - Check the following settings in `System Preferences`:
 	- iCloud
 	- FileVault: Off
