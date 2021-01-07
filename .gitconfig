@@ -10,3 +10,7 @@
 	gpgsign = true
 [help]
 	autocorrect = 1
+[credential]
+	helper = osxkeychain
+[hub]
+	protocol = https
