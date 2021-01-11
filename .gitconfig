@@ -14,3 +14,5 @@
 	helper = osxkeychain
 [hub]
 	protocol = https
+[alias]
+        commit-random = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
