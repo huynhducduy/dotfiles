@@ -13,6 +13,7 @@ brew "broot"
 brew "cairo"
 brew "coreutils"
 brew "croc"
+brew "curl"
 brew "gnutls"
 brew "ffmpeg"
 brew "findutils"
@@ -49,6 +50,7 @@ brew "wifi-password"
 cask "alacritty"
 cask "anaconda"
 cask "authy"
+cask "contexts"
 cask "dashlane"
 cask "discord"
 cask "figma"
@@ -72,6 +74,7 @@ cask "mockoon"
 cask "mysqlworkbench"
 cask "openkey"
 cask "opera"
+cask "osu-development"
 cask "pock"
 cask "postman"
 cask "proxyman"
@@ -88,7 +91,11 @@ cask "tor-browser"
 cask "tower"
 cask "typora"
 cask "visual-studio-code"
+cask "wasabi-wallet"
 cask "zalo"
-mas "Messenger", id: 1480068668	
-mas "RunCat", id: 1429033973	
+mas "Dashlane for Safari", id: 1505779553
+mas "GoodNotes", id: 1444383602
+mas "LINE", id: 539883307
+mas "Messenger", id: 1480068668
+mas "RunCat", id: 1429033973
 mas "Shazam", id: 897118787
