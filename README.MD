@@ -63,7 +63,7 @@ mysql_secure_installation
 - Open all apps and verify, then check for startup apps.
 - Perform some tweak to the macOS: `sh ./osx.sh`
 - Check the following settings in `System Preferences`:
-	- iCloud
+	- iCloud: better turn of sync for Photos
 	- FileVault: Off
 	- Hot Corners: Mission control, Desktop 
 	- Accessibility: disable track pad when mouse keys => options 5 times (oply work for external keyboard)
