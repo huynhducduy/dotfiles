@@ -44,8 +44,8 @@ nvm install 15
 nvm alias default 15
 npm install -g yarn
 ```
-- Install Docker from [here](https://download.docker.com/mac/stable/Docker.dmg), remember to `mysql_secure_installation`
-- Install MySQL from [here](https://dev.mysql.com/downloads/mysql/) (I prefer dmg installation because it come with preference menu)
+- Install Docker from [here](https://download.docker.com/mac/stable/Docker.dmg)
+- Install MySQL from [here](https://dev.mysql.com/downloads/mysql/) (I prefer dmg installation because it come with preference menu), remember to `mysql_secure_installation`
 - Config for MySQL:
 ```
 echo 'export PATH=/usr/local/mysql/bin:$PATH' >> ~/.zshrc
