@@ -1,6 +1,6 @@
 # Duy's dotfiles & Things to do with fresh macOS
 
-- Download your macOS installer (if you want Big Sur, then [here](https://7labs.io/tips-tricks/macos-big-sur-direct-download.html))
+- Download your macOS stand-alone installer (if you want Big Sur, then [here](https://github.com/corpnewt/gibMacOS))
 
 - Disable SIP - in Recovery Mode (System Integrity Protection): [Guide](https://www.macworld.co.uk/how-to/mac/how-turn-off-mac-os-x-system-integrity-protection-rootless-3638975/), `csrutil disable`
 - Disable Secureboot - in Recovery Mode
