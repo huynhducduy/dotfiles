@@ -9,11 +9,11 @@
 - Install the Xcode Command Line Tools: `xcode-select --install`
 - Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 - Login to app store (prepare to install app)
-- Install pretty much everything else: `curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && brew bundle install`
+- Install pretty much everything else: `curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && sudo brew bundle install`
 - Import SSH Keys, GPG Keys
 ```sh
 sudo mkdir ~/.ssh & sudo vi ~/.ssh/id_rsa
-chmod 600 ~/.ssh/id_rsa
+sudo chmod 600 ~/.ssh/id_rsa
 gpg —-import /path/to/public-key-backup
 gpg —-import /path/to/secret-key-backup
 ```
@@ -66,13 +66,18 @@ mysql_secure_installation
 - Open all apps and verify, then check for startup apps.
 - Perform some tweak to the macOS: `sh ./osx.sh`
 - Check the following settings in `System Preferences`:
+	- General: Dark Appearence, Small sidebar icons, no recent items
 	- iCloud: better turn of sync for Photos
 	- FileVault: Off
 	- Hot Corners: Mission control, Desktop 
 	- Accessibility: disable track pad when mouse keys => options 5 times (oply work for external keyboard)
-	- Keyboard, correction,…
+	- Keyboard: disable auto correction
 	- Sharing: computer name
-	- Menubar (hide things on menubar)
+	- Dock + Menubar: auto hide dock, hide everything on menubar
+	- Sound: turn of startup sound
+	- Trackpad: tap to click, app expose
+	- Display: turn off true tone
 	- Scroll direction (natural or stardard?)
 	- Display resolution
+	- Finder Pref: show all extensions,...
 - Install others awesome softwares: [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Awesome-software-to-install)
