@@ -79,5 +79,6 @@ mysql_secure_installation
 	- Display: turn off true tone
 	- Scroll direction (natural or stardard?)
 	- Display resolution
+	- Accessibility: Pointer Control: ignore built-in trackpad, slow down trackpad scroll speed
 	- Finder Pref: show all extensions,...
 - Install others awesome softwares: [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Awesome-software-to-install)
