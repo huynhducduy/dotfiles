@@ -42,6 +42,7 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 nvm install --lts
 nvm install 15
 nvm alias default 15
+nvm alias lts 14
 npm install -g yarn
 ```
 - Install Docker from [here](https://download.docker.com/mac/stable/Docker.dmg)
