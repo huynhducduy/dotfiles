@@ -30,6 +30,7 @@ brew "gnupg"
 brew "go"
 brew "gradle"
 brew "grep"
+brew "hadolint"
 brew "hstr"
 brew "htop"
 brew "hugo"
@@ -51,7 +52,6 @@ brew "wifi-password"
 cask "alacritty"
 cask "anaconda"
 cask "authy"
-cask "binance"
 cask "cheatsheet"
 cask "contexts"
 cask "dashlane"
@@ -64,6 +64,7 @@ cask "google-chrome"
 cask "hazeover"
 cask "hookshot"
 cask "iina"
+cask "imageoptim"
 cask "insomnia"
 cask "intellij-idea"
 cask "keepingyouawake"
@@ -73,6 +74,7 @@ cask "logitech-options"
 cask "lulu"
 cask "microsoft-auto-update"
 cask "microsoft-edge"
+cask "mos"
 cask "openkey"
 cask "opera"
 cask "osu-development"
@@ -92,9 +94,21 @@ cask "typora"
 cask "visual-studio-code"
 cask "wasabi-wallet"
 cask "zalo"
+mas "AwesomeScreenshot", id: 1531282066
 mas "Dashlane for Safari", id: 1505779553
+mas "DuckDuckGo Privacy Essentials", id: 1482920575
+mas "Ghostery Lite", id: 1436953057
 mas "GoodNotes", id: 1444383602
+mas "Grammarly for Safari", id: 1462114288
+mas "ImageFinder for Safari", id: 1514863337
 mas "LINE", id: 539883307
 mas "Messenger", id: 1480068668
+mas "OneTab", id: 1540160809
+mas "PiPer", id: 1421915518
+mas "PrettyJSON for Safari", id: 1445328303
 mas "RunCat", id: 1429033973
 mas "Shazam", id: 897118787
+mas "SimplyJSON", id: 1495193038
+mas "Tab Suspender", id: 1495356253
+mas "Wappalyzer", id: 1520333300
+mas "Xcode", id: 497799835
