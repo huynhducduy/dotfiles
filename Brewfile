@@ -52,6 +52,7 @@ brew "wifi-password"
 cask "alacritty"
 cask "anaconda"
 cask "authy"
+cask "binance"
 cask "cheatsheet"
 cask "contexts"
 cask "dashlane"
@@ -82,11 +83,14 @@ cask "pock"
 cask "postman"
 cask "proxyman"
 cask "rar"
+cask "raycast"
+cask "signal"
 cask "skype"
 cask "slack"
 cask "spotify"
 cask "steam"
 cask "teamviewer"
+cask "telegram"
 cask "textmate"
 cask "tor-browser"
 cask "tower"
@@ -95,7 +99,6 @@ cask "visual-studio-code"
 cask "wasabi-wallet"
 cask "zalo"
 mas "AwesomeScreenshot", id: 1531282066
-mas "Dashlane for Safari", id: 1505779553
 mas "DuckDuckGo Privacy Essentials", id: 1482920575
 mas "Ghostery Lite", id: 1436953057
 mas "GoodNotes", id: 1444383602
@@ -105,7 +108,6 @@ mas "LINE", id: 539883307
 mas "Messenger", id: 1480068668
 mas "OneTab", id: 1540160809
 mas "PiPer", id: 1421915518
-mas "PrettyJSON for Safari", id: 1445328303
 mas "RunCat", id: 1429033973
 mas "Shazam", id: 897118787
 mas "SimplyJSON", id: 1495193038
