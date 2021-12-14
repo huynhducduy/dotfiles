@@ -58,18 +58,19 @@ cask "boom-3d"
 cask "cheatsheet"
 cask "cleanmymac"
 cask "contexts"
-cask "dashlane"
 cask "discord"
 cask "figma"
 cask "firefox-developer-edition"
 cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
+cask "gimp"
 cask "google-chrome"
 cask "hookshot"
 cask "iina"
 cask "imageoptim"
 cask "insomnia"
 cask "intellij-idea"
+cask "jetbrains-toolbox"
 cask "keepingyouawake"
 cask "keka"
 cask "keycastr"
@@ -103,6 +104,7 @@ mas "AdGuard for Safari", id: 1440147259
 mas "AwesomeScreenshot", id: 1531282066
 mas "GoodNotes", id: 1444383602
 mas "Grammarly for Safari", id: 1462114288
+mas "Hotspot Shield", id: 771076721
 mas "ImageFinder for Safari", id: 1514863337
 mas "LINE", id: 539883307
 mas "Messenger", id: 1480068668
