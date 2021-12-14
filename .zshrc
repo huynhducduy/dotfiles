@@ -16,6 +16,7 @@ SPACESHIP_PROMPT_ADD_NEWLINE="false"
 # HIST_STAMPS="mm/dd/yyyy"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 export UPDATE_ZSH_DAYS=30
+# ZSH_TMUX_AUTOSTART="true"
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 autoload -U compinit && compinit
@@ -27,7 +28,7 @@ autoload -U compinit && compinit
 plugins=(
   autoupdate
   git
-  osx
+  macos
   last-working-dir
   extract
   autojump
@@ -36,6 +37,7 @@ plugins=(
   zsh-completions
   zsh-syntax-highlighting
   history-substring-search
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -62,10 +64,6 @@ export LC_ALL='en_US.UTF-8';
 export ARCHFLAGS="-arch x86_64"
 
 export PATH="/usr/local/sbin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PATH="/usr/local/anaconda3/bin:$PATH"
 export PATH=/usr/local/mysql/bin:$PATH
@@ -130,3 +128,7 @@ export HSTR_CONFIG=hicolor       # get more colors
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
 source "$HOME/.config/broot/launcher/bash/br"
+
+export NPM_TOKEN="xxx"
+
+eval "$(fnm env)"
