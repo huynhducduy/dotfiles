@@ -57,6 +57,15 @@ mysql_secure_installation
 - Config `iTerm2` - import profile `iterm2-huynhducduy.json`
 - Config `Alacritty` - `~/.config/alacritty/alacritty.yml`
 - Config `spotify-tui`, `spotifyd`
+- Config `spicetify`
+```sh
+spicetify config custom_apps new-releases
+spicetify config custom_apps lyrics-plus
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/install.sh | sh
+```
+- Install `https://github.com/huhridge/huh-spicetify-extensions`
+	- Full App Display modified
+	- Display full Album date
 - Set `Keka` as default
 - Config `Google Chrome` - Extensions - [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Chrome-Extensions)
 - Config `VSCode` + `Intellij IDEA` - Settings, extensions... [Wiki](https://github.com/huynhducduy/dotfiles/wiki/VSCode-Extensions)
