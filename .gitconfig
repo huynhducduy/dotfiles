@@ -16,6 +16,7 @@
 	protocol = https
 [alias]
         commit-random = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
+	amend = commit --amend --no-edit
 [init]
 	defaultBranch = main
 [core]
