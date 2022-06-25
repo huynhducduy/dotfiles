@@ -67,6 +67,7 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/mai
 	- Full App Display modified
 	- Display full Album date
 - Set `Keka` as default
+- Import config for `Raycast`
 - Config `Google Chrome` - Extensions - [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Chrome-Extensions)
 - Config `VSCode` + `Intellij IDEA` - Settings, extensions... [Wiki](https://github.com/huynhducduy/dotfiles/wiki/VSCode-Extensions)
 - For `Tabnine` (`Tabnine::config`, `Tabnine::sem`)
