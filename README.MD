@@ -39,11 +39,14 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 ```
 - Install nodejs version
 ```sh
-nvm install --lts
-nvm install 15
-nvm alias default 15
-nvm alias lts 14
-npm install -g yarn
+fnm install 16
+fnm install 18
+fnm alias default 18
+fnm alias lts 16
+npm i -g typescript eslint
+corepack enable
+# For nodejs < 16
+npm i -g corepack
 ```
 - Install Docker from [here](https://download.docker.com/mac/stable/Docker.dmg)
 - Install MySQL from [here](https://dev.mysql.com/downloads/mysql/) (I prefer dmg installation because it come with preference menu), remember to `mysql_secure_installation`
