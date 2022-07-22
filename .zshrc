@@ -131,4 +131,4 @@ source "$HOME/.config/broot/launcher/bash/br"
 
 export NPM_TOKEN="xxx"
 
-eval "$(fnm env)"
+eval "$(fnm env --use-on-cd)"
