@@ -100,4 +100,5 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/mai
 	- Display resolution
 	- Accessibility: Pointer Control: ignore built-in trackpad, slow down trackpad scroll speed, disable track pad when mouse keys => options 5 times (oply work for external keyboard)
 	- Finder Pref: show all extensions,...
+- Contexts: Disable panel, Cmd Tab start Fast Search on typing
 - Install others awesome softwares: [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Awesome-software-to-install)
