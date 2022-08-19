@@ -55,7 +55,7 @@ corepack enable
 # For nodejs < 16
 npm i -g corepack
 ```
-- Install Docker from [here](https://download.docker.com/mac/stable/Docker.dmg)
+- Install Docker from [here](https://docs.docker.com/desktop/install/mac-install/)
 - Install MySQL from [here](https://dev.mysql.com/downloads/mysql/) (I prefer dmg installation because it come with preference menu), remember to `mysql_secure_installation`
 - Config for MySQL:
 ```
