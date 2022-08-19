@@ -7,6 +7,7 @@
 - Disable Gatekeeper: `sudo spctl --master-disable`
 - Change DNS (to [1.1.1.1](https://1.1.1.1/dns/), or [Google](https://developers.google.com/speed/public-dns))
 - Install the Xcode Command Line Tools: `xcode-select --install`
+- Agree to Xcode `sudo xcodebuild -license accept`
 - Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 - Login to app store (prepare to install app)
 - Install pretty much everything else: `curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && sudo brew bundle install`
@@ -25,6 +26,7 @@ git config --global user.signingkey "yourgpgkey"
 git config --global commit.gpgsign true
 git config --global help.autocorrect 1
 ```
+- Install Java: `https://www.oracle.com/java/technologies/downloads/`
 - Grab `.zshrc` from this repository and use it the way you like (like install `oh-my-zsh & some plugins`)
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
