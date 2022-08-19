@@ -5,7 +5,6 @@
 	required = true
 [user]
 	name = Huynh Duc Duy
-	email = duuuuuuuuy@gmail.com
 [commit]
 	gpgsign = true
 [help]
@@ -17,7 +16,10 @@
 [alias]
         commit-random = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
 	amend = commit --amend --no-edit
+[gpg]
+	program = /usr/local/bin/gpg
 [init]
 	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore
+	autocrlf = input
