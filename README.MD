@@ -90,15 +90,14 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/mai
 	- iCloud: better turn of sync for Photos
 	- FileVault: Off
 	- Hot Corners: Mission control, Desktop 
-	- Accessibility: disable track pad when mouse keys => options 5 times (oply work for external keyboard)
 	- Keyboard: disable auto correction
 	- Sharing: computer name
-	- Dock + Menubar: auto hide dock, hide everything on menubar
+	- Dock + Menubar: auto hide dock, hide everything on menubar except battery
 	- Sound: turn of startup sound
 	- Trackpad: tap to click, app expose
 	- Display: turn off true tone
 	- Scroll direction (natural or stardard?)
 	- Display resolution
-	- Accessibility: Pointer Control: ignore built-in trackpad, slow down trackpad scroll speed
+	- Accessibility: Pointer Control: ignore built-in trackpad, slow down trackpad scroll speed, disable track pad when mouse keys => options 5 times (oply work for external keyboard)
 	- Finder Pref: show all extensions,...
 - Install others awesome softwares: [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Awesome-software-to-install)
