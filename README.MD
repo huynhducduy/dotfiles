@@ -49,7 +49,7 @@ broot
 fnm install 16
 fnm install 18
 fnm alias default 18
-fnm alias lts 16
+fnm alias 16 lts
 npm i -g typescript eslint
 corepack enable
 # For nodejs < 16
