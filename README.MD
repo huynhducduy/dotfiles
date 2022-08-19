@@ -63,7 +63,6 @@ echo 'export PATH=/usr/local/mysql/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 mysql_secure_installation
 ```
-- Manually config `broot` - `/usr/local/Cellar/broot/1.2.8/bin/broot`
 - Config `iTerm2` - import profile `iterm2-huynhducduy.json`
 - Config `Alacritty` - `~/.config/alacritty/alacritty.yml`
 - Config `spotify-tui`, `spotifyd`
