@@ -27,7 +27,7 @@ git config --global commit.gpgsign true
 git config --global help.autocorrect 1
 ```
 - Install Java: `https://www.oracle.com/java/technologies/downloads/`
-- Grab `.zshrc` from this repository and use it the way you like (like install `oh-my-zsh & some plugins`)
+- Install oh-my-zsh
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
@@ -38,6 +38,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+```
+- Grab `.zshrc` from this repository and use it the way you like (like install `oh-my-zsh & some plugins`)
+- Initial some packages:
+```sh
+broot
 ```
 - Install nodejs version
 ```sh
