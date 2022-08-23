@@ -19,7 +19,13 @@ export UPDATE_ZSH_DAYS=30
 # ZSH_TMUX_AUTOSTART="true"
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-autoload -U compinit && compinit
+
+autoload -Uz compinit
+if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -37,7 +43,8 @@ plugins=(
   zsh-completions
   zsh-syntax-highlighting
   history-substring-search
-  tmux
+  evalcache
+  # tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -61,10 +68,10 @@ export LC_ALL='en_US.UTF-8';
 # fi
 
 # Compilation flags
-export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch arm64"
 
 export PATH="/usr/local/sbin:$PATH"
-
+export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 export PATH="/usr/local/anaconda3/bin:$PATH"
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -77,13 +84,14 @@ export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 18)
 export PATH=$JAVA_HOME/bin:$PATH
-# export ANDROID_HOME="~/Library/Android/sdk"
-# export PATH=$ANDROID_HOME/platform-tools:$PATH
-# export PATH=$ANDROID_HOME/tools:$PATH
-# export PATH=$ANDROID_HOME/tools/bin:$PATH
 # export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export GOPATH=$HOME/.go
 export GOROOT="$(brew --prefix golang)/libexec"
@@ -127,12 +135,41 @@ setopt histignorespace           # skip cmds w/ leading space from history
 export HSTR_CONFIG=hicolor       # get more colors
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
+# Histoy configuration
+setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording entry.
+setopt SHARE_HISTORY             # share history between all sessions.
+setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
+
+source "$HOME/.config/broot/launcher/bash/br"
+
 export NPM_TOKEN="xxx"
 
-eval "$(fnm env --use-on-cd)"
+# Terminal command navigation
+bindkey "^[[1;5C" forward-word                      # [Ctrl-right] - forward one word
+bindkey "^[[1;5D" backward-word                     # [Ctrl-left] - backward one word
+bindkey '^[^[[C' forward-word                       # [Ctrl-right] - forward one word
+bindkey '^[^[[D' backward-word                      # [Ctrl-left] - backward one word
+bindkey '^[[1;3D' beginning-of-line                 # [Alt-left] - beginning of line
+bindkey '^[[1;3C' end-of-line                       # [Alt-right] - end of line
+bindkey '^[[5D' beginning-of-line                   # [Alt-left] - beginning of line
+bindkey '^[[5C' end-of-line                         # [Alt-right] - end of line
+bindkey '^?' backward-delete-char                   # [Backspace] - delete backward
+if [[ "${terminfo[kdch1]}" != "" ]]; then
+    bindkey "${terminfo[kdch1]}" delete-char        # [Delete] - delete forward
+else
+    bindkey "^[[3~" delete-char                     # [Delete] - delete forward
+    bindkey "^[3;5~" delete-char
+    bindkey "\e[3~" delete-char
+fi
+bindkey "^A" vi-beginning-of-line
+bindkey -M viins "^F" vi-forward-word               # [Ctrl-f] - move to next word
+bindkey -M viins "^E" vi-add-eol                    # [Ctrl-e] - move to end of line
+bindkey "^J" history-beginning-search-forward
+bindkey "^K" history-beginning-search-backward
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+_evalcache fnm env --use-on-cd
+
+_evalcache /opt/homebrew/bin/brew shellenv
+
+# eliminates duplicates in *paths
+typeset -gU cdpath fpath path
