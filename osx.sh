@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Adopted from https://github.com/mathiasbynens/dotfiles/blob/main/.macos
+# Adopted from https://github.com/mathiasbynens/dotfiles/blob/main/.macos and https://macos-defaults.com/
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -128,6 +128,36 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom right screen corner → Desktop
 defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
+
+# Show all processes in Activity Monitor
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# Safari: Show the full URL in the address bar  (note: this still hides the scheme)
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# Safari: Allow hitting the Backspace key to go to the previous page in history
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# When performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Re-enable subpixel antialiasing
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
 for app in "Activity Monitor" \
 	"cfprefsd" \
