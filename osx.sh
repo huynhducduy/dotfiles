@@ -11,12 +11,12 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# More watch files
-echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
-echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
-sudo sysctl -w kern.maxfiles=65536
-sudo sysctl -w kern.maxfilesperproc=65536
-ulimit -n 65536
+# More watch files (increase the dcriptor limits)
+echo kern.maxfiles=10485760 | sudo tee -a /etc/sysctl.conf
+echo kern.maxfilesperproc=1048576 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -w kern.maxfiles=10485760
+sudo sysctl -w kern.maxfilesperproc=1048576
+ulimit -n 1048576
 
 # Disable all sorts of autocorrection
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
