@@ -64,6 +64,7 @@ echo 'export PATH=/usr/local/mysql/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 mysql_secure_installation
 ```
+- Install `bettery` `curl -s https://raw.githubusercontent.com/actuallymentor/battery/main/setup.sh | bash`
 - Config `iTerm2` - import profile `iterm2-huynhducduy.json`
 - Config `Alacritty` - `~/.config/alacritty/alacritty.yml`
 - Config `spotify-tui`, `spotifyd`
