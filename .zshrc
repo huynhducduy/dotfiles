@@ -44,6 +44,7 @@ plugins=(
   zsh-syntax-highlighting
   history-substring-search
   evalcache
+  bgnotify
   # tmux
 )
 
