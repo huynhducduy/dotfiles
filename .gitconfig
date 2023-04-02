@@ -1,3 +1,4 @@
+# https://github.com/nicknisi/dotfiles/blob/main/config/git/config
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -14,12 +15,30 @@
 [hub]
 	protocol = https
 [alias]
-        commit-random = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
+    commit-random = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
 	amend = commit --amend --no-edit
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
 [init]
 	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+	trustExitCode = true
+[merge]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = true
