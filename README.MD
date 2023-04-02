@@ -7,9 +7,11 @@
 - Disable Gatekeeper: `sudo spctl --master-disable`
 - Change DNS (to [1.1.1.1](https://1.1.1.1/dns/), or [Google](https://developers.google.com/speed/public-dns))
 - Install the Xcode Command Line Tools: `xcode-select --install`
-- Agree to Xcode `sudo xcodebuild -license accept`
+- Install Rosetta (For Apple Silicon only): `sudo softwareupdate --install-rosetta`
 - Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 - Login to app store (prepare to install app)
+- Install `Xcode`
+- Agree to Xcode `sudo xcodebuild -license accept`
 - Install pretty much everything else: `eval "$(/opt/homebrew/bin/brew shellenv)" && curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && brew bundle install`
 - Import SSH Keys, GPG Keys
 ```sh
