@@ -121,7 +121,7 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 function server() {
 	local port="${1:-8000}";
 	sleep 1 && open "http://localhost:${port}/" &
-	python -m http.server ${port}
+	python3 -m http.server ${port}
 }
 
 # Generate a random string (using as secret) with given bytes
@@ -172,5 +172,10 @@ _evalcache fnm env --use-on-cd
 
 _evalcache /opt/homebrew/bin/brew shellenv
 
+eval $(thefuck --alias)
+
 # eliminates duplicates in *paths
 typeset -gU cdpath fpath path
+eval
+EAS_AC_ZSH_SETUP_PATH=/Users/huynhducduy/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
