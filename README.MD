@@ -10,7 +10,7 @@
 - Agree to Xcode `sudo xcodebuild -license accept`
 - Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 - Login to app store (prepare to install app)
-- Install pretty much everything else: `curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && sudo brew bundle install`
+- Install pretty much everything else: `eval "$(/opt/homebrew/bin/brew shellenv)" && curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && brew bundle install`
 - Import SSH Keys, GPG Keys
 ```sh
 sudo mkdir ~/.ssh & sudo vi ~/.ssh/id_rsa
