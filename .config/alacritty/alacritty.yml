@@ -2,7 +2,6 @@ font:
   size: 12
   normal:
     family: 'Hack Nerd Font Mono'
-  use_thin_strokes: true
 # Colors (Base16 Default Dark)
 colors:
   # Default colors
