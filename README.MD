@@ -15,7 +15,7 @@
 - Install pretty much everything else: `eval "$(/opt/homebrew/bin/brew shellenv)" && curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && brew bundle install`
 - Import SSH Keys, GPG Keys
 ```sh
-sudo mkdir ~/.ssh & sudo vi ~/.ssh/id_rsa
+sudo mkdir ~/.ssh && sudo vi ~/.ssh/id_rsa
 sudo chmod 600 ~/.ssh/id_rsa
 gpg —-import /path/to/public-key-backup
 gpg —-import /path/to/secret-key-backup
