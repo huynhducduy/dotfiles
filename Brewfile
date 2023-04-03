@@ -108,17 +108,13 @@ cask "obs"
 cask "obsidian"
 cask "openkey"
 cask "opera"
-cask "playcover-community"
 cask "postman"
 cask "proxyman"
 cask "rar"
 cask "raycast"
 cask "react-native-debugger"
-cask "reactotron"
 cask "rectangle-pro"
-cask "shortcat"
 cask "shottr"
-cask "signal"
 cask "skype"
 cask "slack"
 cask "spotify"
@@ -128,7 +124,6 @@ cask "telegram"
 cask "textmate"
 cask "tor-browser"
 cask "tower"
-cask "utm"
 cask "visual-studio-code"
 cask "zalo"
 cask "zoom"
@@ -141,9 +136,6 @@ mas "Hotspot Shield", id: 771076721
 mas "ImageFinder for Safari", id: 1514863337
 mas "Medis", id: 1579200037
 mas "Messenger", id: 1480068668
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
 mas "OneTab", id: 1540160809
 mas "PiPer", id: 1421915518
 mas "RunCat", id: 1429033973
