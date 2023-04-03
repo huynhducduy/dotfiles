@@ -80,7 +80,7 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/mai
 - Install `https://github.com/huhridge/huh-spicetify-extensions`
 	- Full App Display modified
 	- Display full Album date
-- Set `Keka` as default
+- Set `Keka` as default, give files permissions
 - Import config for `Raycast`
 - Install `Raycast` extensions [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Raycast-Extensions)
 - Config `Google Chrome` - Extensions - [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Chrome-Extensions)
