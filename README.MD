@@ -110,3 +110,4 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/mai
 	- Finder Pref: show all extensions,...
 - Contexts: Disable panel, Cmd Tab start Fast Search on typing
 - Install others awesome softwares: [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Awesome-software-to-install)
+- Config `Kaleidoscope` integrations
