@@ -177,7 +177,7 @@ eval $(thefuck --alias)
 # eliminates duplicates in *paths
 typeset -gU cdpath fpath path
 eval
-EAS_AC_ZSH_SETUP_PATH=/Users/huynhducduy/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
+EAS_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 alias python=python3
