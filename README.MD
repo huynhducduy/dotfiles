@@ -52,10 +52,11 @@ broot
 ```
 - Install nodejs version
 ```sh
+fnm install 16
 fnm install 18
 fnm install 19
-fnm alias 19 default
-fnm alias 16 lts
+fnm default 19
+fnm alias 18 lts
 npm i -g typescript eslint
 corepack enable
 # For nodejs < 16
