@@ -181,3 +181,5 @@ export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 alias python=python3
 alias pip=pip3
+
+export DOCKER_BUILDKIT=1
