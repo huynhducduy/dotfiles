@@ -183,3 +183,4 @@ alias python=python3
 alias pip=pip3
 
 export DOCKER_BUILDKIT=1
+alias docker=nerdctl # or podman
