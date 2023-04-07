@@ -50,6 +50,7 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 ```sh
 broot
 colima nerdctl install
+sudo ln -s /usr/local/bin/nerdctl /usr/local/bin/docker # use nerdctl as a replacement of docker
 ```
 - Install nodejs version
 ```sh
