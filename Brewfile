@@ -7,7 +7,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "homebrew/test-bot"
-tap "playcover/playcover"
 tap "rigellute/tap"
 tap "wix/brew"
 brew "python@3.11"
@@ -17,13 +16,20 @@ brew "bat"
 brew "broot"
 brew "cairo"
 brew "cocoapods"
+brew "gnutls"
+brew "colima"
 brew "coreutils"
 brew "croc"
 brew "curl"
 brew "deno"
+brew "folly"
+brew "edencommon"
 brew "terminal-notifier"
 brew "fastlane"
-brew "gnutls"
+brew "fizz"
+brew "wangle"
+brew "fbthrift"
+brew "fb303"
 brew "ffmpeg"
 brew "findutils"
 brew "flyctl"
@@ -45,6 +51,7 @@ brew "hadolint"
 brew "hstr"
 brew "htop"
 brew "hugo"
+brew "libheif"
 brew "imagemagick"
 brew "ios-deploy"
 brew "libpq"
@@ -67,10 +74,8 @@ brew "facebook/fb/idb-companion"
 brew "wix/brew/applesimutils"
 cask "adobe-creative-cloud"
 cask "alacritty"
-cask "anaconda"
 cask "android-file-transfer"
 cask "authy"
-cask "background-music"
 cask "binance"
 cask "blackhole-16ch"
 cask "boom-3d"
@@ -100,6 +105,7 @@ cask "lulu"
 cask "meetingbar"
 cask "microsoft-auto-update"
 cask "microsoft-edge"
+cask "minisim"
 cask "monitorcontrol"
 cask "mos"
 cask "nosql-workbench"
@@ -135,13 +141,3 @@ mas "Grammarly for Safari", id: 1462114288
 mas "Hotspot Shield", id: 771076721
 mas "ImageFinder for Safari", id: 1514863337
 mas "Medis", id: 1579200037
-mas "Messenger", id: 1480068668
-mas "OneTab", id: 1540160809
-mas "PiPer", id: 1421915518
-mas "RunCat", id: 1429033973
-mas "Shazam", id: 897118787
-mas "SimplyJSON", id: 1495193038
-mas "Spark", id: 1176895641
-mas "Tab Suspender", id: 1495356253
-mas "Wappalyzer", id: 1520333300
-mas "Xcode", id: 497799835
