@@ -2,8 +2,9 @@
 
 - Download your macOS stand-alone installer (if you want Big Sur, then [here](https://github.com/corpnewt/gibMacOS))
 
-- Disable SIP - in Recovery Mode (System Integrity Protection): [Guide](https://www.macworld.co.uk/how-to/mac/how-turn-off-mac-os-x-system-integrity-protection-rootless-3638975/), `csrutil disable`
-- Disable Secureboot - in Recovery Mode
+- Boot into Recovery Mode
+	- Disable SIP (System Integrity Protection): [Guide](https://www.macworld.co.uk/how-to/mac/how-turn-off-mac-os-x-system-integrity-protection-rootless-3638975/), `csrutil disable`
+	- Disable Secureboot (Change `Security Policy` to `Reduced Security`)
 - Disable Gatekeeper: `sudo spctl --master-disable`
 - Change DNS (to [1.1.1.1](https://1.1.1.1/dns/), or [Google](https://developers.google.com/speed/public-dns))
 - Install the Xcode Command Line Tools: `xcode-select --install`
