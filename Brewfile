@@ -90,7 +90,7 @@ cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 cask "gimp"
 cask "google-chrome"
-cask "grammarly"
+cask "grammarly-desktop"
 cask "iina"
 cask "imageoptim"
 cask "insomnia"
@@ -137,7 +137,13 @@ mas "AwesomeScreenshot", id: 1531282066
 mas "Dashlane", id: 517914548
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "GoodNotes", id: 1444383602
-mas "Grammarly for Safari", id: 1462114288
 mas "Hotspot Shield", id: 771076721
 mas "ImageFinder for Safari", id: 1514863337
-mas "Medis", id: 1579200037
+mas "OneTab", id: 1540160809
+mas "PiPer", id: 1421915518
+mas "RunCat", id: 1429033973
+mas "Shazam", id: 897118787
+mas "SimplyJSON", id: 1495193038
+mas "Tab Suspender", id: 1495356253
+mas "Wappalyzer", id: 1520333300
+mas "Xcode", id: 497799835
