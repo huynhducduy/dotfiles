@@ -16,8 +16,6 @@ brew "bat"
 brew "broot"
 brew "cairo"
 brew "cocoapods"
-brew "gnutls"
-brew "colima"
 brew "coreutils"
 brew "croc"
 brew "curl"
@@ -30,12 +28,14 @@ brew "fizz"
 brew "wangle"
 brew "fbthrift"
 brew "fb303"
+brew "gnutls"
 brew "ffmpeg"
 brew "findutils"
 brew "flyctl"
 brew "fnm"
 brew "fzf"
 brew "gawk"
+brew "gh"
 brew "git"
 brew "git-flow"
 brew "git-lfs"
@@ -46,6 +46,7 @@ brew "gnu-tar"
 brew "gnupg"
 brew "go"
 brew "gradle"
+brew "graphviz"
 brew "grep"
 brew "hadolint"
 brew "hstr"
@@ -102,11 +103,12 @@ cask "keka"
 cask "keycastr"
 cask "kitty"
 cask "lulu"
+cask "medis"
 cask "meetingbar"
+cask "messenger"
 cask "microsoft-auto-update"
 cask "microsoft-edge"
 cask "minisim"
-cask "monitorcontrol"
 cask "mos"
 cask "nosql-workbench"
 cask "notion"
@@ -119,7 +121,9 @@ cask "proxyman"
 cask "rar"
 cask "raycast"
 cask "react-native-debugger"
+cask "readdle-spark"
 cask "rectangle-pro"
+cask "shortcat"
 cask "shottr"
 cask "skype"
 cask "slack"
@@ -133,7 +137,8 @@ cask "tower"
 cask "visual-studio-code"
 cask "zalo"
 cask "zoom"
-mas "AwesomeScreenshot", id: 1531282066
+mas "Awesome Screenshot & Recorder", id: 1531282066
+mas "Boom 3D Netflix Extension", id: 6445882848
 mas "Dashlane", id: 517914548
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "GoodNotes", id: 1444383602
@@ -141,9 +146,9 @@ mas "Hotspot Shield", id: 771076721
 mas "ImageFinder for Safari", id: 1514863337
 mas "OneTab", id: 1540160809
 mas "PiPer", id: 1421915518
+mas "Pure Paste", id: 1611378436
 mas "RunCat", id: 1429033973
 mas "Shazam", id: 897118787
 mas "SimplyJSON", id: 1495193038
-mas "Tab Suspender", id: 1495356253
 mas "Wappalyzer", id: 1520333300
 mas "Xcode", id: 497799835
