@@ -107,7 +107,8 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
 # Decreate delay time on display Dock
-defaults write com.apple.dock autohide-time-modifier -float 0.2;
+defaults write com.apple.dock autohide-time-modifier -float 0.1
+defaults write com.apple.dock autohide-delay -float 0.1
 
 # Hot corners
 # Possible values:
@@ -123,11 +124,11 @@ defaults write com.apple.dock autohide-time-modifier -float 0.2;
 # 12: Notification Center
 # 13: Lock Screen
 # Bottom left screen corner → Mission Control
-defaults write com.apple.dock wvous-bl-corner -int 2
-defaults write com.apple.dock wvous-bl-modifier -int 0
+# defaults write com.apple.dock wvous-bl-corner -int 2
+# defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom right screen corner → Desktop
-defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 0
+# defaults write com.apple.dock wvous-br-corner -int 4
+# defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Show all processes in Activity Monitor
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
