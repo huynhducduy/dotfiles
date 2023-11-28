@@ -45,6 +45,7 @@ plugins=(
   history-substring-search
   evalcache
   bgnotify
+  you-should-use
   # tmux
 )
 
