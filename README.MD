@@ -57,11 +57,10 @@ sudo ln -s /usr/local/bin/nerdctl /usr/local/bin/docker # use nerdctl as a repla
 ```
 - Install nodejs version
 ```sh
-fnm install 16
-fnm install 18
-fnm install 19
-fnm default 19
-fnm alias 18 lts
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs latest
+asdf install nodejs 20.12.2
+asdf global nodejs 20.12.2
 npm i -g typescript eslint
 corepack enable
 # For nodejs < 16
