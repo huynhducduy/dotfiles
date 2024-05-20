@@ -15,7 +15,7 @@
 [hub]
 	protocol = https
 [alias]
-    commit-random = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
+	commit-random = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
 	amend = commit --amend --no-edit
 [gpg]
 	program = /opt/homebrew/bin/gpg
@@ -24,6 +24,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
+	ignoreCase = false
 [diff]
 	tool = Kaleidoscope
 [difftool "Kaleidoscope"]
