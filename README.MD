@@ -17,9 +17,11 @@
 - Import SSH Keys, GPG Keys
 ```sh
 sudo mkdir ~/.ssh && sudo vi ~/.ssh/id_rsa
+sudo mkdir ~/.ssh && sudo vi ~/.ssh/id_ed25519
 sudo touch ~/.ssh/known_hosts
 sudo chown -v $USER ~/.ssh
 sudo chown -v $USER ~/.ssh/id_rsa
+sudo chown -v $USER ~/.ssh/id_ed25519
 sudo chown -v $USER ~/.ssh/known_hosts
 gpg —-import /path/to/public-key-backup
 gpg —-import /path/to/secret-key-backup
