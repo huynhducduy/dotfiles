@@ -74,11 +74,13 @@ export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH=$JAVA_HOME/bin:$PATH
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
 export GOPATH=$HOME/.go
 export GOROOT="$(brew --prefix golang)/libexec"
@@ -105,15 +107,15 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Start an HTTP server from a directory, optionally specifying the port, require python3
 function server() {
-        local port="${1:-8000}";
-        sleep 1 && open "http://localhost:${port}/" &
-        python3 -m http.server ${port}
+	local port="${1:-8000}";
+	sleep 1 && open "http://localhost:${port}/" &
+	python3 -m http.server ${port}
 }
 
 # Generate a random string (using as secret) with given bytes
 function secret() {
-        local bytes="${1:-16}"
-        head -c $bytes </dev/urandom|xxd -p -u
+	local bytes="${1:-16}"
+	head -c $bytes </dev/urandom|xxd -p -u
 }
 
 # HSTR configuration - add this to ~/.zshrc
@@ -195,3 +197,4 @@ _evalcache /opt/homebrew/bin/brew shellenv
 . "/Users/huynhducduy/.starkli/env"
 
 export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_installed
+
