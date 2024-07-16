@@ -14,6 +14,10 @@
 - Install `Xcode`
 - Agree to Xcode `sudo xcodebuild -license accept`
 - Install pretty much everything else: `eval "$(/opt/homebrew/bin/brew shellenv)" && curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && brew bundle install`
+- Finish install java (openjdk)
+```sh
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+```
 - Import SSH Keys, GPG Keys
 ```sh
 sudo mkdir ~/.ssh && sudo vi ~/.ssh/id_rsa
@@ -34,7 +38,6 @@ git config --global user.signingkey "yourgpgkey"
 git config --global commit.gpgsign true
 git config --global help.autocorrect 1
 ```
-- Install Java: `https://www.oracle.com/java/technologies/downloads/`
 - Install oh-my-zsh
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
