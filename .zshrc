@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
 SPACESHIP_PROMPT_ADD_NEWLINE="false"
 
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 # DISABLE_UPDATE_PROMPT="true"
@@ -18,17 +18,6 @@ SPACESHIP_PROMPT_ADD_NEWLINE="false"
 export UPDATE_ZSH_DAYS=30
 # ZSH_TMUX_AUTOSTART="true"
 
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-autoload -Uz compinit
-if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
-  compinit
-else
-  compinit -C
-fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
@@ -38,6 +27,7 @@ plugins=(
   last-working-dir
   extract
   autojump
+  fzf
   fzf-tab
   zsh-autosuggestions
   zsh-completions
@@ -46,10 +36,9 @@ plugins=(
   evalcache
   bgnotify
   you-should-use
+  asdf
   # tmux
 )
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -84,11 +73,8 @@ export PATH="/usr/local/opt/gnu-indent/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-export JAVA_HOME=$(/usr/libexec/java_home -v 18)
+export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$JAVA_HOME/bin:$PATH
-# export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
@@ -119,15 +105,15 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Start an HTTP server from a directory, optionally specifying the port, require python3
 function server() {
-	local port="${1:-8000}";
-	sleep 1 && open "http://localhost:${port}/" &
-	python3 -m http.server ${port}
+        local port="${1:-8000}";
+        sleep 1 && open "http://localhost:${port}/" &
+        python3 -m http.server ${port}
 }
 
 # Generate a random string (using as secret) with given bytes
 function secret() {
-	local bytes="${1:-16}"
-	head -c $bytes </dev/urandom|xxd -p -u
+        local bytes="${1:-16}"
+        head -c $bytes </dev/urandom|xxd -p -u
 }
 
 # HSTR configuration - add this to ~/.zshrc
@@ -142,8 +128,6 @@ setopt SHARE_HISTORY             # share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
 
 source "$HOME/.config/broot/launcher/bash/br"
-
-export NPM_TOKEN="xxx"
 
 # Terminal command navigation
 bindkey "^[[1;5C" forward-word                      # [Ctrl-right] - forward one word
@@ -168,15 +152,9 @@ bindkey -M viins "^E" vi-add-eol                    # [Ctrl-e] - move to end of 
 bindkey "^J" history-beginning-search-forward
 bindkey "^K" history-beginning-search-backward
 
-_evalcache fnm env --use-on-cd
-
-_evalcache /opt/homebrew/bin/brew shellenv
-
-eval $(thefuck --alias)
-
 # eliminates duplicates in *paths
 typeset -gU cdpath fpath path
-eval
+
 EAS_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
@@ -184,4 +162,36 @@ alias python=python3
 alias pip=pip3
 
 export DOCKER_BUILDKIT=1
-alias docker=nerdctl # or podman
+
+# pnpm
+export PNPM_HOME="/Users/huynhducduy/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export PATH="$PATH:/Users/huynhducduy/.local/bin"
+
+# Enable brew completions in zsh, this must come before compinit
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+autoload -Uz compinit
+if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
+
+# This will call compinit
+source $ZSH/oh-my-zsh.sh
+
+eval $(thefuck --alias)
+
+_evalcache /opt/homebrew/bin/brew shellenv
+
+[ -s "/Users/huynhducduy/.scm_breeze/scm_breeze.sh" ] && source "/Users/huynhducduy/.scm_breeze/scm_breeze.sh"
+
+. "/Users/huynhducduy/.starkli/env"
+
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_installed
