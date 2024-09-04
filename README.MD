@@ -14,10 +14,6 @@
 - Install `Xcode`
 - Agree to Xcode `sudo xcodebuild -license accept`
 - Install pretty much everything else: `eval "$(/opt/homebrew/bin/brew shellenv)" && curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && brew bundle install`
-- Finish install java (openjdk)
-```sh
-sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-```
 - Import SSH Keys, GPG Keys
 ```sh
 sudo mkdir ~/.ssh && sudo vi ~/.ssh/id_rsa
@@ -59,6 +55,12 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 broot
 colima nerdctl install
 sudo ln -s /usr/local/bin/nerdctl /usr/local/bin/docker # use nerdctl as a replacement of docker
+```
+- Install java (openjdk)
+```sh
+mise use -g java@openjdk-23
+sudo mkdir /Library/Java/JavaVirtualMachines/openjdk-23.jdk
+sudo ln -s ~/.local/share/mise/installs/java/openjdk-23/Contents /Library/Java/JavaVirtualMachines/openjdk-23.jdk/Contents
 ```
 - Install nodejs version
 ```sh
