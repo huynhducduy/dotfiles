@@ -71,6 +71,10 @@ npm i -g typescript eslint
 # For nodejs < 16
 npm i -g corepack
 ```
+- Install rust
+```sh
+rustup default stable
+```
 - Install MySQL from [here](https://dev.mysql.com/downloads/mysql/) (I prefer dmg installation because it come with preference menu), remember to `mysql_secure_installation`
 - Config for MySQL:
 ```
