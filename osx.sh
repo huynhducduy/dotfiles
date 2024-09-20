@@ -160,6 +160,9 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Re-enable subpixel antialiasing
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
+# Disable spotlight
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+
 for app in "Activity Monitor" \
 	"cfprefsd" \
 	"Dock" \
