@@ -162,6 +162,7 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
 # Disable spotlight
 launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+mdutil -i off
 
 for app in "Activity Monitor" \
 	"cfprefsd" \
