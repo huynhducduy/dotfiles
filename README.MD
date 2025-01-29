@@ -56,6 +56,10 @@ broot
 colima nerdctl install
 sudo ln -s /usr/local/bin/nerdctl /usr/local/bin/docker # use nerdctl as a replacement of docker
 ```
+- `Mise` as `Asdf`
+```sh
+ln -s ~/.local/share/mise ~/.asdf
+```
 - Install java (openjdk)
 ```sh
 mise use -g java@openjdk-23
