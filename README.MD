@@ -58,15 +58,17 @@ sudo ln -s /usr/local/bin/nerdctl /usr/local/bin/docker # use nerdctl as a repla
 ```sh
 ln -s ~/.local/share/mise ~/.asdf
 ```
-- Install java (openjdk)
+- Install `Mise` tools
 ```sh
-mise use -g java@openjdk-23
-sudo mkdir /Library/Java/JavaVirtualMachines/openjdk-23.jdk
-sudo ln -s ~/.local/share/mise/installs/java/openjdk-23/Contents /Library/Java/JavaVirtualMachines/openjdk-23.jdk/Contents
+mise i
 ```
-- Install nodejs version
+- Ln java
 ```sh
-mise use --global node@20
+sudo mkdir /Library/Java/JavaVirtualMachines/zulu-<major version>.jdk
+sudo ln -s ~/.local/share/mise/installs/java/zulu-<major version>/Contents /Library/Java/JavaVirtualMachines/zulu-<major version>.jdk/Contents
+```
+- Install nodejs essentials
+```sh
 corepack enable
 corepack prepare pnpm@latest --activate
 npm i -g typescript eslint
@@ -76,6 +78,11 @@ npm i -g corepack
 - Install rust
 ```sh
 rustup default stable
+```
+- Install python essentials
+```sh
+uv tool install ruff@latest
+uv tool install basedpyright@latest
 ```
 - Install MySQL from [here](https://dev.mysql.com/downloads/mysql/) (I prefer dmg installation because it come with preference menu), remember to `mysql_secure_installation`
 - Config for MySQL:
