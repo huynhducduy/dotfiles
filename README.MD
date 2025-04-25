@@ -83,6 +83,7 @@ rustup default stable
 ```sh
 uv tool install ruff@latest
 uv tool install basedpyright@latest
+uv tool install sqlfluff@latest
 ```
 - Install MySQL from [here](https://dev.mysql.com/downloads/mysql/) (I prefer dmg installation because it come with preference menu), remember to `mysql_secure_installation`
 - Config for MySQL:
