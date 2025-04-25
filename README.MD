@@ -78,6 +78,8 @@ npm i -g corepack
 - Install rust
 ```sh
 rustup default stable
+rustup component add rustfmt
+rustup component add clippy
 ```
 - Install python essentials
 ```sh
