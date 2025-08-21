@@ -8,6 +8,7 @@
 	name = Huynh Duc Duy
 [commit]
 	gpgsign = true
+	template = /Users/huynhducduy/.stCommitMsg
 [help]
 	autocorrect = 1
 [credential]
@@ -17,29 +18,68 @@
 [alias]
 	commit-random = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
 	amend = commit --amend --no-edit
+	undo = reset --soft HEAD^
+	stash-untracked = "!f() {    \
+		git stash;               \
+		git stash -u;            \
+		git stash pop stash@{1}; \
+	}; f"
+	stashs = stash push -S
+	stashu = "!git stash push -S; git stash; git stash pop --index stash@{1}"
 [gpg]
 	program = /opt/homebrew/bin/gpg
+	format = openpgp
 [init]
 	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
 	ignoreCase = false
-[diff]
-	tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-	trustExitCode = true
+	pager = delta
+	compress = 9
+	preloadindex = true
+[interactive]
+	diffFilter = delta --color-only
 [merge]
-	tool = Kaleidoscope
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[mergetool]
-	prompt = false
+	conflictstyle = zdiff3
 [push]
 	autoSetupRemote = true
+	default = current
+	followTags = true
 [pull]
 	rebase = true
+	default = current
+[diff]
+	renames = copies
+	mnemonicprefix = true
+	compactionHeuristic = true
+[diff "lockb"]
+	textconv = bun
+	binary = true
+[rerere]
+	enabled = true
+[branch]
+	sort = -committerdate
+	autosetuprebase = always
+[tag]
+	sort = -taggerdate
+[delta]
+	navigate = true
+[gitbutler]
+	aiModelProvider = openai
+	diffLengthLimit = 10000000
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[status]
+	branch = true
+	showStash = true
+	showUntrackedFiles = all
+[grep]
+	extendRegexp = true
+	lineNumber = true
+[rebase]
+	autoStash = true

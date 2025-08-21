@@ -1,7 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="spaceship"
-SPACESHIP_PROMPT_ADD_NEWLINE="false"
+ZSH_THEME=""
 
 CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
@@ -22,21 +21,21 @@ export UPDATE_ZSH_DAYS=30
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
   autoupdate
-  git
+  # git
   macos
   last-working-dir
   extract
-  autojump
   fzf
   fzf-tab
   zsh-autosuggestions
   zsh-completions
   zsh-syntax-highlighting
-  history-substring-search
+  # fast-syntax-highlighting
+  zsh-history-substring-search
   evalcache
   bgnotify
   you-should-use
-  asdf
+  mise
   # tmux
 )
 
@@ -61,45 +60,53 @@ export LC_ALL='en_US.UTF-8';
 # Compilation flags
 export ARCHFLAGS="-arch arm64"
 
-export PATH="/usr/local/sbin:$PATH"
-export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
-export PATH="/usr/local/anaconda3/bin:$PATH"
-export PATH=/usr/local/mysql/bin:$PATH
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-indent/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+HOMEBREW_PREFIX="/opt/homebrew"
+HOMEBREW_DOWNLOAD_CONCURRENCY=auto
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/gnu-indent/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/gnu-getopt/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
+
+# export LDFLAGS="-L$HOMEBREW_PREFIX/opt/libpq/lib"
+# export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/libpq/include"
+# export LDFLAGS="-L$HOMEBREW_PREFIX/opt/curl/lib"
+# export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/curl/include"
+
+# ANDROID environment variables
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
-export GOPATH=$HOME/.go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-export GOTOOLDIR="${GOROOT}/pkg/tool/darwin_amd64"
-export GOARCH="amd64"
-export GOBIN=""
-export GOEXE=""
-export GOHOSTARCH="amd64"
-export GOHOSTOS="darwin"
-export GOOS="darwin"
-export GORACE=""
-export CC="clang"
-export GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/g8/551vgzq10c7bdq3k7zby5_gw0000gn/T/go-build818624631=/tmp/go-build -gno-record-gcc-switches -fno-common"
-export CXX="clang++"
-export CGO_ENABLED="1"
+# GOLANG environment variables: `go help environment`, https://pkg.go.dev/go/build, https://pkg.go.dev/cmd/cgo
+# export CC="clang"
+# export CXX="clang++"
+# export CGO_ENABLED="1"
+
+# DOCKER environment variables
+export DOCKER_BUILDKIT=1
+
+# PYTHON alias
+alias python=python3
+alias pip=pip3
+
+# CARGO
+CARGO_UNSTABLE_GC=true
 
 # Update macos software & brew & nodejs packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask; brew cleanup; npm install npm -g; npm update -g;'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask; brew cleanup -s; brew autoremove; "$ZSH/tools/upgrade.sh"; mise upgrade; mise prune; mise cache clean; npm install npm -g; npm update -g; pip install --upgrade pip;'
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -123,8 +130,9 @@ alias hh=hstr                    # hh to be alias for hstr
 setopt histignorespace           # skip cmds w/ leading space from history
 export HSTR_CONFIG=hicolor       # get more colors
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
+export HSTR_TIOCSTI=y
 
-# Histoy configuration
+# History configuration
 setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording entry.
 setopt SHARE_HISTORY             # share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
@@ -151,29 +159,26 @@ fi
 bindkey "^A" vi-beginning-of-line
 bindkey -M viins "^F" vi-forward-word               # [Ctrl-f] - move to next word
 bindkey -M viins "^E" vi-add-eol                    # [Ctrl-e] - move to end of line
-bindkey "^J" history-beginning-search-forward
-bindkey "^K" history-beginning-search-backward
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # eliminates duplicates in *paths
 typeset -gU cdpath fpath path
 
-EAS_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-
-alias python=python3
-alias pip=pip3
-
-export DOCKER_BUILDKIT=1
+# eas autocomplete setup
+EAS_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH;
 
 # pnpm
-export PNPM_HOME="/Users/huynhducduy/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-export PATH="$PATH:/Users/huynhducduy/.local/bin"
 
 # Enable brew completions in zsh, this must come before compinit
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -190,11 +195,40 @@ source $ZSH/oh-my-zsh.sh
 
 eval $(thefuck --alias)
 
-_evalcache /opt/homebrew/bin/brew shellenv
+_evalcache $HOMEBREW_PREFIX/bin/brew shellenv
 
-[ -s "/Users/huynhducduy/.scm_breeze/scm_breeze.sh" ] && source "/Users/huynhducduy/.scm_breeze/scm_breeze.sh"
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-. "/Users/huynhducduy/.starkli/env"
+eval "$($HOMEBREW_PREFIX/bin/mise activate zsh)"
 
-export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_installed
+# export PATH="$HOME/.cargo/bin:$PATH"
 
+rga-fzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
+
+export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --color=always'
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+eval "$(starship init zsh)"
+
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+
+# NodeJS code-caching
+export NODE_COMPILE_CACHE=~/.cache/nodejs-compile-cache
+
+alias graphite="$HOMEBREW_PREFIX/bin/gt"
+
+eval "$(zoxide init zsh)"

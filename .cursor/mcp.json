@@ -1,0 +1,22 @@
+{
+	"mcpServers": {
+		"context7": {
+			"command": "bunx",
+			"args": ["-y", "@upstash/context7-mcp"]
+		},
+		"Figma Dev Mode MCP": {
+			"url": "http://localhost:3845/sse"
+		},
+		"serena": {
+			"command": "uvx",
+			"args": [
+				"--from",
+				"git+https://github.com/oraios/serena",
+				"serena",
+				"start-mcp-server",
+				"--context",
+				"ide-assistant"
+			]
+		}
+	}
+}
