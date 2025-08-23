@@ -71,7 +71,7 @@ sudo ln -s ~/.local/share/mise/installs/java/zulu-<major version>/Contents /Libr
 ```sh
 corepack enable
 corepack prepare pnpm@latest --activate
-npm i -g typescript eslint @antfu/ni
+npm i -g typescript eslint @antfu/ni npq
 # For nodejs < 16
 npm i -g corepack
 ```
