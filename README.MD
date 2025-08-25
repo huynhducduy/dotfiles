@@ -26,13 +26,15 @@ sudo chown -v $USER ~/.ssh/known_hosts
 gpg —-import /path/to/public-key-backup
 gpg —-import /path/to/secret-key-backup
 ```
-- Config git:
+- Config git, jj:
 ```sh
 git config --global user.name "Your Name Here"
 git config --global user.email "your_email@youremail.com"
 git config --global user.signingkey "yourgpgkey"
 git config --global commit.gpgsign true
 git config --global help.autocorrect 1
+jj config set --user user.name "Huynh Duc Duy"
+jj config set --user user.email "duuuuuuuuy@gmail.com"
 ```
 - Install oh-my-zsh
 ```sh
