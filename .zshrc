@@ -78,11 +78,15 @@ export PATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/icu4c@77/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/icu4c@77/sbin:$PATH"
 
 # export LDFLAGS="-L$HOMEBREW_PREFIX/opt/libpq/lib"
 # export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/libpq/include"
 # export LDFLAGS="-L$HOMEBREW_PREFIX/opt/curl/lib"
 # export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/curl/include"
+# export LDFLAGS="-L$HOMEBREW_PREFIX/opt/icu4c@77/lib"
+# export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/icu4c@77/include"
 
 # ANDROID environment variables
 export ANDROID_HOME=$HOME/Library/Android/sdk
