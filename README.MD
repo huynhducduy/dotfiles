@@ -15,6 +15,7 @@
 - Install `Xcode`
 - Agree to Xcode `sudo xcodebuild -license accept`
 - Install pretty much everything else: `eval "$(/opt/homebrew/bin/brew shellenv)" && curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile && brew bundle install`
+- Verify homebrew installation: `brew doctor`
 - Import SSH Keys, GPG Keys
 ```sh
 sudo mkdir ~/.ssh && sudo vi ~/.ssh/id_rsa
@@ -29,6 +30,7 @@ gpg —-import /path/to/secret-key-backup
 ```
 - Config git, jj:
 ```sh
+sudo git lfs install --system
 git config --global user.name "Your Name Here"
 git config --global user.email "your_email@youremail.com"
 git config --global user.signingkey "yourgpgkey"
