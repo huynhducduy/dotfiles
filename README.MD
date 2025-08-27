@@ -4,9 +4,10 @@
 
 - Boot into Recovery Mode
 	- Disable SIP (System Integrity Protection): [Guide](https://www.macworld.co.uk/how-to/mac/how-turn-off-mac-os-x-system-integrity-protection-rootless-3638975/), `csrutil disable`
-	- Disable Secureboot (Change `Security Policy` to `Reduced Security`)
+	- Disable Secureboot (Change `Security Policy` to `Reduced Security` in `Startup Disk` settings)
 - Disable Gatekeeper: `sudo spctl --master-disable`
 - Change DNS (to [1.1.1.1](https://1.1.1.1/dns/), or [Google](https://developers.google.com/speed/public-dns))
+- Install [encrypted DNS profiles](https://github.com/paulmillr/encrypted-dns)
 - Install the Xcode Command Line Tools: `xcode-select --install`
 - Install Rosetta (For Apple Silicon only): `sudo softwareupdate --install-rosetta`
 - Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
@@ -95,21 +96,6 @@ echo 'export PATH=/usr/local/mysql/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 mysql_secure_installation
 ```
-- Install `battery` `curl -s https://raw.githubusercontent.com/actuallymentor/battery/main/setup.sh | bash`
-- Run `battery` `battery maintain 80`
-- Config `iTerm2` - import profile `iterm2-huynhducduy.json`
-- Config `Alacritty` - `~/.config/alacritty/alacritty.yml`
-- Config `spotify-tui`, `spotifyd`
-- Config `spicetify`
-```sh
-spicetify config custom_apps new-releases
-spicetify config custom_apps lyrics-plus
-curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/install.sh | sh
-```
-- Install `https://github.com/huhridge/huh-spicetify-extensions`
-	- Full App Display modified
-	- Display full Album date
-- Install [encrypted DNS profiles](https://github.com/paulmillr/encrypted-dns)
 - Set `Keka` as default, give files permissions
 - Import config for `Raycast`
 - Install `Raycast` extensions [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Raycast-Extensions)
