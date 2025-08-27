@@ -95,28 +95,62 @@ echo 'export PATH=/usr/local/mysql/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 mysql_secure_installation
 ```
-- Set `Keka` as default, give files permissions
+- Set `Keka` as default, enable finder extension
 - Import config for `Raycast`
 - Config `Logi Options`/`G Hub`
-- Config `Openkey` - especially the `modern icon`
+- Config `Openkey`: modern icon, `ctrl + shift` to switch language
 - Open all apps and verify, then check for startup apps.
 - Perform some tweak to the macOS: `sh ./osx.sh`
 - Check the following settings in `System Preferences`:
-	- General: Dark Appearence, Small sidebar icons, no recent items
-	- iCloud: better turn of sync for Photos
-	- FileVault: Off
-	- Hot Corners: Mission control, Desktop 
+	- iCloud: Sync everything
+	- Wifi: 
+		- Private Wi-Fi address: `Rotate` or `Fixed`
+		- Limit IP address tracking: on
+		- Auto proxy discovery: on
+	- General: Name
+	- Appearance: Dark, Sidebar icon size: small
+	- Apple Intelligence & Siri: Always show Siri captions, Always show speech
+	- Control Center: 
+		- Spotlight: don't show in menubar
+		- Recent documents, applications and servers: None
+		- Clock:
+			- Show date: when space allows
+			- Show the day of the week
+			- Flash the time separators
+	- Desktop & Dock:
+		- Double-click a window's tile bar to: Minimize
+		- Widgets: turn everything off
+		- Ask to keep changes when closing documents
+		- Drag windows to ..., Hold..., Tiled...: off
+		- Mission Control: Automatically rearrange Spaces: off
+			- Hot Corners: turn off
+	- Display: turn off true tone, night shift
+	- Spotlight: turn off everything
+	- Sound: turn off startup sound
+	- Lock Screen:
+		- Start Screen Saver: never
+		- Turn display off: 5 and 10 minutes
+		- Require password: after 1 minute
+	- Privacy & Security
+		- FileVault: Off
+	- Internet Accounts: add secondary accounts, work accounts,...
 	- Keyboard: disable auto correction
-	- Sharing: computer name
-	- Dock + Menubar: auto hide dock, hide everything on menubar except battery
-	- Sound: turn of startup sound
+		- Keyboard Shortcuts: remove Spotlight shortcuts
 	- Trackpad: tap to click, app expose
-	- Display: turn off true tone
-	- Scroll direction (natural or stardard?)
-	- Display resolution
-	- Accessibility: Pointer Control: ignore built-in trackpad, slow down trackpad scroll speed, disable track pad when mouse keys => options 5 times (oply work for external keyboard)
-	- Finder Pref: show all extensions,...
-	- Messages: enable iCloud; Config on iPhone: Messages fowarding;
+- Finder Settings
+- Messages: enable iCloud; Config on iPhone: Messages fowarding;
 - Contexts: Disable panel, Cmd Tab start Fast Search on typing
+- Chrome:
+	- Enable legacy extensions (MV2)
+
+```
+chrome://flags/#temporary-unexpire-flags-m137                     [Enabled]
+# Restart chrome, then
+chrome://flags/#extension-manifest-v2-deprecation-warning         [Disabled]
+chrome://flags/#extension-manifest-v2-deprecation-disabled        [Disabled]
+chrome://flags/#extension-manifest-v2-deprecation-unsupported     [Disabled]
+chrome://flags/#allow-legacy-mv2-extensions                       [Enabled]
+```
+
 - Install others awesome softwares: [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Awesome-software-to-install)
 - Config `Kaleidoscope` integrations
