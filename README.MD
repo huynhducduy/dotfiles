@@ -97,11 +97,8 @@ mysql_secure_installation
 ```
 - Set `Keka` as default, give files permissions
 - Import config for `Raycast`
-- Install `Raycast` extensions [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Raycast-Extensions)
-- Config `Google Chrome` - Extensions - [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Chrome-Extensions)
-- Config `VSCode` + `Intellij IDEA` - Settings, extensions... [Wiki](https://github.com/huynhducduy/dotfiles/wiki/VSCode-Extensions)
-- Config `Logi Options`
-- Config `Openkey` - especially the `modern icon` which fit with macOS Big Sur
+- Config `Logi Options`/`G Hub`
+- Config `Openkey` - especially the `modern icon`
 - Open all apps and verify, then check for startup apps.
 - Perform some tweak to the macOS: `sh ./osx.sh`
 - Check the following settings in `System Preferences`:
