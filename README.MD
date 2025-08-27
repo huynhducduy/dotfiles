@@ -31,10 +31,9 @@ gpg —-import /path/to/secret-key-backup
 git config --global user.name "Your Name Here"
 git config --global user.email "your_email@youremail.com"
 git config --global user.signingkey "yourgpgkey"
-git config --global commit.gpgsign true
-git config --global help.autocorrect 1
-jj config set --user user.name "Huynh Duc Duy"
-jj config set --user user.email "duuuuuuuuy@gmail.com"
+jj config set --user user.name "Your Name Here"
+jj config set --user user.email "your_email@youremail.com"
+jj config set --user signing.key "yourgpgkey"
 ```
 - Install oh-my-zsh
 ```sh
