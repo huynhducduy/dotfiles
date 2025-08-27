@@ -1,0 +1,15 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[user]
+name = "Huynh Duc Duy"
+email = "duuuuuuuuy@gmail.com"
+
+[snapshot]
+max-new-file-size = 104857600
+
+[ui]
+paginate = "auto"
+
+[signing]
+behavior = "own"
+backend = "gpg"
