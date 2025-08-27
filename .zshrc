@@ -236,3 +236,9 @@ export NODE_COMPILE_CACHE=~/.cache/nodejs-compile-cache
 alias graphite="$HOMEBREW_PREFIX/bin/gt"
 
 eval "$(zoxide init zsh)"
+
+alias npm='npq-hero'
+alias yarn="NPQ_PKG_MGR=yarn npq-hero"
+alias pnpm="NPQ_PKG_MGR=pnpm npq-hero"
+
+source <(COMPLETE=zsh jj)
