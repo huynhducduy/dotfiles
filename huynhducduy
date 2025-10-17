@@ -50,11 +50,15 @@ git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/
 git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
 ```
 - Grab `.zshrc` from this repository and use it the way you like (like install `oh-my-zsh & some plugins`)
-- Initial some packages:
+- Initialize some packages:
 ```sh
 broot
 colima nerdctl install
 sudo ln -s /usr/local/bin/nerdctl /usr/local/bin/docker # use nerdctl as a replacement of docker
+```
+- Set rustup profile
+```sh
+rustup set profile default
 ```
 - `Mise` as `Asdf`
 ```sh
@@ -68,25 +72,6 @@ mise i
 ```sh
 sudo mkdir /Library/Java/JavaVirtualMachines/zulu-<major version>.jdk
 sudo ln -s ~/.local/share/mise/installs/java/zulu-<major version>/Contents /Library/Java/JavaVirtualMachines/zulu-<major version>.jdk/Contents
-```
-- Install nodejs essentials
-```sh
-corepack enable
-corepack prepare pnpm@latest --activate
-npm i -g typescript eslint @antfu/ni npq
-# For nodejs < 16
-npm i -g corepack
-```
-- Install rust
-```sh
-rustup component add rustfmt
-rustup component add clippy
-```
-- Install python essentials
-```sh
-uv tool install ruff@latest
-uv tool install basedpyright@latest
-uv tool install sqlfluff@latest
 ```
 - Install MySQL from [here](https://dev.mysql.com/downloads/mysql/) (I prefer dmg installation because it come with preference menu), remember to `mysql_secure_installation`
 - Config for MySQL:
