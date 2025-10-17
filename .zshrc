@@ -118,7 +118,7 @@ alias pip=pip3
 CARGO_UNSTABLE_GC=true
 
 # Update macos software & brew & nodejs packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask; brew cleanup -s; brew autoremove; "$ZSH/tools/upgrade.sh"; mise upgrade; mise prune; mise cache clean; npm install npm -g; npm update -g; pip install --upgrade pip;'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask; brew cleanup -s; brew autoremove; "$ZSH/tools/upgrade.sh"; mise upgrade; mise prune; mise cache clean; uv tool upgrade --all; npm install npm -g; npm update -g; python -m pip install --upgrade pip; pip list --outdated --format=json | jq -r ".[].name" | xargs -r -n1 pip install --upgrade; gem update --system; rustup update;'
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -245,8 +245,9 @@ alias graphite="$HOMEBREW_PREFIX/bin/gt"
 
 eval "$(zoxide init zsh)"
 
-alias npm='npq-hero'
-alias yarn="NPQ_PKG_MGR=yarn npq-hero"
-alias pnpm="NPQ_PKG_MGR=pnpm npq-hero"
+# alias npm='npq-hero'
+# alias yarn="NPQ_PKG_MGR=yarn npq-hero"
+# alias pnpm="NPQ_PKG_MGR=pnpm npq-hero"
 
 source <(COMPLETE=zsh jj)
+
