@@ -1,18 +1,16 @@
 [tools]
-node = "latest"
+node = { version = "latest", postinstall = "corepack enable; corepack prepare pnpm@latest --activate; npm i -g typescript eslint @antfu/ni npq;" }
 bun = "latest"
 deno = "latest"
 go = "latest"
 java = "zulu"
 ruby = "latest"
 cargo-binstall = "latest"
-slsa-verifier = "latest"
-cosign = "latest"
 python = "latest"
-uv = "latest"
+uv = { version = "latest", postinstall = "uv tool install ruff@latest; uv tool install basedpyright@latest; uv tool install sqlfluff@latest;" }
 "cargo:cargo-cache" = "latest"
 zig = "latest"
-rust = "latest"
+rust = { version = "latest", components = "" }
 
 [settings]
 experimental = true
