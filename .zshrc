@@ -78,23 +78,24 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/binutils/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/inetutils/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/gnu-indent/libexec/gnubin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/gnu-getopt/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/icu4c@77/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/icu4c@77/sbin:$PATH"
 
-# export LDFLAGS="-L$HOMEBREW_PREFIX/opt/libpq/lib"
-# export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/libpq/include"
-# export LDFLAGS="-L$HOMEBREW_PREFIX/opt/curl/lib"
-# export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/curl/include"
-# export LDFLAGS="-L$HOMEBREW_PREFIX/opt/icu4c@77/lib"
-# export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/icu4c@77/include"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/curl/lib"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/curl/include"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/icu4c@77/lib"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/icu4c@77/include"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/binutils/lib"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/binutils/include"
 
 # ANDROID environment variables
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -214,20 +215,7 @@ _evalcache $HOMEBREW_PREFIX/bin/brew shellenv
 eval "$($HOMEBREW_PREFIX/bin/mise activate zsh)"
 
 # export PATH="$HOME/.cargo/bin:$PATH"
-
-rga-fzf() {
-	RG_PREFIX="rga --files-with-matches"
-	local file
-	file="$(
-		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
-				--phony -q "$1" \
-				--bind "change:reload:$RG_PREFIX {q}" \
-				--preview-window="70%:wrap"
-	)" &&
-	echo "opening $file" &&
-	xdg-open "$file"
-}
+# export PATH="/Users/huynhducduy/.bun/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --color=always'
 export FZF_DEFAULT_OPTS="--ansi"
@@ -250,4 +238,3 @@ eval "$(zoxide init zsh)"
 # alias pnpm="NPQ_PKG_MGR=pnpm npq-hero"
 
 source <(COMPLETE=zsh jj)
-
