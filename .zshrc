@@ -89,6 +89,9 @@ export PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/icu4c@77/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/icu4c@77/sbin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/llvm/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/m4/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/sqlite/bin:$PATH"
 
 export LDFLAGS="-L$HOMEBREW_PREFIX/opt/curl/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/curl/include"
@@ -96,6 +99,21 @@ export LDFLAGS="-L$HOMEBREW_PREFIX/opt/icu4c@77/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/icu4c@77/include"
 export LDFLAGS="-L$HOMEBREW_PREFIX/opt/binutils/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/binutils/include"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/sqlite/lib"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/sqlite/include"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/llvm/lib"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/llvm/include"
+
+# To use the bundled libunwind and libc++ please use the following LDFLAGS:
+# NOTE: You probably want to use the libunwind and libc++ provided by macOS unless you know what you're doing.
+# LDFLAGS="-L/opt/homebrew/opt/llvm/lib/unwind -lunwind"
+# LDFLAGS="-L/opt/homebrew/opt/llvm/lib/c++ -L/opt/homebrew/opt/llvm/lib/unwind -lunwind"
+
+export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/curl/lib/pkgconfig"
+export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/icu4c@77/lib/pkgconfig"
+export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/sqlite/lib/pkgconfig"
+
+export CMAKE_PREFIX_PATH="$HOMEBREW_PREFIX/opt/llvm"
 
 # ANDROID environment variables
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -119,7 +137,8 @@ alias pip=pip3
 CARGO_UNSTABLE_GC=true
 
 # Update macos software & brew & nodejs packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask; brew cleanup -s; brew autoremove; "$ZSH/tools/upgrade.sh"; mise upgrade; mise prune; mise cache clean; uv tool upgrade --all; npm install npm -g; npm update -g; python -m pip install --upgrade pip; pip list --outdated --format=json | jq -r ".[].name" | xargs -r -n1 pip install --upgrade; gem update --system; rustup update;'
+# sudo softwareupdate -i -a; 
+alias update='brew update; brew upgrade; brew upgrade --cask; brew cleanup -s; brew autoremove; "$ZSH/tools/upgrade.sh"; mise upgrade; mise prune; mise cache clean; uv tool upgrade --all; npm install npm -g; npm update -g; python -m pip install --upgrade pip; pip list --outdated --format=json | jq -r ".[].name" | xargs -r -n1 pip install --upgrade; gem update --system; rustup update;'
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
