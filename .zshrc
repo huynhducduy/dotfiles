@@ -231,8 +231,6 @@ _evalcache $HOMEBREW_PREFIX/bin/brew shellenv
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-eval "$($HOMEBREW_PREFIX/bin/mise activate zsh)"
-
 # export PATH="$HOME/.cargo/bin:$PATH"
 # export PATH="/Users/huynhducduy/.bun/bin:$PATH"
 
