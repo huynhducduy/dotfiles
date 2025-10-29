@@ -7,240 +7,294 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-	"confirm_quit": true,
-	"edit_predictions": {
-		"mode": "eager"
-	},
-	"icon_theme": "VSCode Icons (Dark)",
-	"agent": {
-		"default_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-4o"
-		},
-	},
-	"features": {
-		"edit_prediction_provider": "zed"
-	},
-	"ui_font_size": 14,
-	"buffer_font_size": 12,
-	"theme": {
-		"mode": "system",
-		"light": "Github Light",
-		"dark": "Github Dark"
-	},
-	"wrap_guides": [80, 120],
-	"format_on_save": "on",
-	"formatter": "auto", // or prettier?
-	"preview_tabs": {
-		"enabled": true,
-		"enable_preview_from_file_finder": false,
-		"enable_preview_from_code_navigation": false
-	},
-	"indent_guides": {
-		"enabled": true,
-		"coloring": "indent_aware",
-		"background_coloring": "indent_aware",
-		"line_width": 1,
-		"active_line_width": 2
-	},
-	"git": {
-		"inline_blame": {
-			"enabled": true,
-			"show_commit_summary": true,
-			"delay_ms": 500
-		}
-	},
-	"tabs": {
-		"close_position": "right",
-		"file_icons": true,
-		"git_status": true
-	},
-	"project_panel": {
-		"indent_size": 12
-	},
-	"outline_panel": {
-		"dock": "left",
-		"indent_size": 12
-	},
-	"inlay_hints": {
-		"enabled": true,
-		"show_type_hints": true,
-		"show_parameter_hints": true,
-		"show_other_hints": true,
-		"edit_debounce_ms": 500,
-		"scroll_debounce_ms": 50
-	},
-	"preferences": {
-		"includeInlayParameterNameHints": "all",
-		"includeInlayParameterNameHintsWhenArgumentMatchesName": true,
-		"includeInlayFunctionParameterTypeHints": true,
-		"includeInlayVariableTypeHints": true,
-		"includeInlayVariableTypeHintsWhenTypeMatchesName": true,
-		"includeInlayPropertyDeclarationTypeHints": true,
-		"includeInlayFunctionLikeReturnTypeHints": true,
-		"includeInlayEnumMemberValueHints": true
-	},
-	"file_types": {
-		"JSONC": ["**/.vscode/*.json"]
-	},
-	"code_actions_on_format": {
-		"source.fixAll.eslint": true,
-		"source.organizeImports": true
-	},
-	"languages": {
-		"JavaScript": {
-			"language_servers": ["vtsls", "eslint"],
-			"formatter": "language_server",
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			}
-		},
-		"TypeScript": {
-			"language_servers": ["vtsls", "eslint"],
-			"formatter": "language_server",
-			"prettier": { "allowed": true },
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			}
-		},
-		"TSX": {
-			"language_servers": ["vtsls", "eslint"],
-			"formatter": "language_server",
-			"prettier": { "allowed": true },
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			}
-		},
-		"Python": {
-			"language_servers": ["PyLSP", "basedpyright", "!pyright", "ruff"],
-			"formatter": [
-				{
-					"language_server": {
-						"name": "ruff"
-					}
-				}
-			]
-		}
-	},
-	"lsp": {
-		"eslint": {
-			"settings": {
-				"nodePath": "node",
-				"workingDirectory": {
-					"mode": "auto"
-				}
-			},
-			"problems": {
-				"shortenToSingleLine": false
-			},
-			"rulesCustomizations": [
-				// Silent the stylistic rules in you IDE, but still auto fix them
-				{ "rule": "prettier/prettier", "severity": "off" }
-			]
-		},
-		"biome": {
-			"settings": {
-				"require_config_file": true
-			}
-		},
-		"vtsls": {
-			"settings": {
-				"javascript": {
-					"updateImportsOnFileMove.enabled": "prompt",
-					"suggestionActions.enabled": true,
-					"suggest.completeFunctionCalls": true,
-					"referencesCodeLens": {
-						"enabled": true,
-						"showOnAllFunctions": true
-					},
-					"preferGoToSourceDefinition": true,
-					"inlayHints": {
-						"parameterNames": {
-							"enabled": "all",
-							"suppressWhenArgumentMatchesName": true
-						},
-						"parameterTypes": {
-							"enabled": true
-						},
-						"variableTypes": {
-							"enabled": true,
-							"suppressWhenTypeMatchesName": true
-						},
-						"propertyDeclarationTypes": {
-							"enabled": true
-						},
-						"functionLikeReturnTypes": {
-							"enabled": true
-						},
-						"enumMemberValues": {
-							"enabled": true
-						}
-					},
-					"preferences": {
-						"preferTypeOnlyAutoImports": true,
-						"autoImportSpecifierExcludeRegexes": ["^(node:)?os$"]
-					},
-					"experimental": {
-						"expandableHover": true
-					}
-				},
-				"typescript": {
-					"updateImportsOnFileMove.enabled": "prompt",
-					"suggestionActions.enabled": true,
-					"suggest.completeFunctionCalls": true,
-					"referencesCodeLens": {
-						"enabled": true,
-						"showOnAllFunctions": true
-					},
-					"implementationsCodeLens": {
-						"enabled": true,
-						"showOnInterfaceMethods": true
-					},
-					"tsserver": {
-						"experimental.enableProjectDiagnostics": true
-					},
-					"preferGoToSourceDefinition": true,
-					"inlayHints": {
-						"parameterNames": {
-							"enabled": "all",
-							"suppressWhenArgumentMatchesName": true
-						},
-						"parameterTypes": {
-							"enabled": true
-						},
-						"variableTypes": {
-							"enabled": true,
-							"suppressWhenTypeMatchesName": true
-						},
-						"propertyDeclarationTypes": {
-							"enabled": true
-						},
-						"functionLikeReturnTypes": {
-							"enabled": true
-						},
-						"enumMemberValues": {
-							"enabled": true
-						}
-					},
-					"preferences": {
-						"preferTypeOnlyAutoImports": true,
-						"autoImportSpecifierExcludeRegexes": ["^(node:)?os$"]
-					},
-					"experimental": {
-						"expandableHover": true
-					}
-				}
-			}
-		},
-		"basedpyright": {
-			"settings": {
-				"basedpyright.analysis": {
-					"diagnosticMode": "openFilesOnly",
-					"inlayHints": {
-						"callArgumentNames": false
-					}
-				}
-			}
-		}
-	}
+  "auto_install_extensions": {
+    "astro": true,
+    "basedpyright": true,
+    "basher": true,
+    "biome": true,
+    "cspell": true,
+    "csv": true,
+    "deno": true,
+    "docker-compose": true,
+    "dockerfile": true,
+    "elixir": true,
+    "emmet": true,
+    "env": true,
+    "git-firefly": true,
+    "github-theme": true,
+    "golangci-lint": true,
+    "graphql": true,
+    "html": true,
+    "java": true,
+    "just-ls": true,
+    "kotlin": true,
+    "latex": true,
+    "log": true,
+    "make": true,
+    "mcp-server-context7": true,
+    "mcp-server-github": true,
+    "mcp-server-sequential-thinking": true,
+    "neocmake": true,
+    "nginx": true,
+    "nix": true,
+    "oxc": true,
+    "postgres-context-server": true,
+    "postgres-language-server": true,
+    "prisma": true,
+    "proto": true,
+    "r": true,
+    "rainbow-csv": true,
+    "ruby": true,
+    "ruff": true,
+    "scala": true,
+    "scss": true,
+    "solidity": true,
+    "sql": true,
+    "stylelint": true,
+    "svelte": true,
+    "swift": true,
+    "terraform": true,
+    "toml": true,
+    "typos": true,
+    "vscode-icons": true,
+    "vue": true,
+    "xml": true,
+    "zig": true
+  },
+  "confirm_quit": true,
+  "edit_predictions": {
+    "mode": "eager"
+  },
+  "icon_theme": "VSCode Icons (Dark)",
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "ui_font_size": 14,
+  "buffer_font_size": 12,
+  "theme": {
+    "mode": "system",
+    "light": "Github Light",
+    "dark": "Github Dark"
+  },
+  "wrap_guides": [80, 120],
+  "format_on_save": "on",
+  "formatter": "auto", // or prettier?
+  "preview_tabs": {
+    "enabled": true,
+    "enable_preview_from_file_finder": false,
+    "enable_preview_from_code_navigation": false
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+    "background_coloring": "indent_aware",
+    "line_width": 1,
+    "active_line_width": 2
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+      "show_commit_summary": true,
+      "delay_ms": 500
+    }
+  },
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true
+  },
+  "project_panel": {
+    "indent_size": 12
+  },
+  "outline_panel": {
+    "dock": "left",
+    "indent_size": 12
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 500,
+    "scroll_debounce_ms": 50
+  },
+  "preferences": {
+    "includeInlayParameterNameHints": "all",
+    "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+    "includeInlayFunctionParameterTypeHints": true,
+    "includeInlayVariableTypeHints": true,
+    "includeInlayVariableTypeHintsWhenTypeMatchesName": true,
+    "includeInlayPropertyDeclarationTypeHints": true,
+    "includeInlayFunctionLikeReturnTypeHints": true,
+    "includeInlayEnumMemberValueHints": true
+  },
+  "file_types": {
+    "JSONC": ["**/.vscode/*.json"]
+  },
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "languages": {
+    "JavaScript": {
+      "language_servers": ["vtsls", "eslint"],
+      "formatter": "language_server",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "language_servers": ["vtsls", "eslint"],
+      "formatter": "language_server",
+      "prettier": { "allowed": true },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TSX": {
+      "language_servers": ["vtsls", "eslint"],
+      "formatter": "language_server",
+      "prettier": { "allowed": true },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "Python": {
+      "language_servers": ["PyLSP", "basedpyright", "!pyright", "ruff"],
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "nodePath": "node",
+        "workingDirectory": {
+          "mode": "auto"
+        }
+      },
+      "problems": {
+        "shortenToSingleLine": false
+      },
+      "rulesCustomizations": [
+        // Silent the stylistic rules in you IDE, but still auto fix them
+        { "rule": "prettier/prettier", "severity": "off" }
+      ]
+    },
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    },
+    "vtsls": {
+      "settings": {
+        "javascript": {
+          "updateImportsOnFileMove.enabled": "prompt",
+          "suggestionActions.enabled": true,
+          "suggest.completeFunctionCalls": true,
+          "referencesCodeLens": {
+            "enabled": true,
+            "showOnAllFunctions": true
+          },
+          "preferGoToSourceDefinition": true,
+          "inlayHints": {
+            "parameterNames": {
+              "enabled": "all",
+              "suppressWhenArgumentMatchesName": true
+            },
+            "parameterTypes": {
+              "enabled": true
+            },
+            "variableTypes": {
+              "enabled": true,
+              "suppressWhenTypeMatchesName": true
+            },
+            "propertyDeclarationTypes": {
+              "enabled": true
+            },
+            "functionLikeReturnTypes": {
+              "enabled": true
+            },
+            "enumMemberValues": {
+              "enabled": true
+            }
+          },
+          "preferences": {
+            "preferTypeOnlyAutoImports": true,
+            "autoImportSpecifierExcludeRegexes": ["^(node:)?os$"]
+          },
+          "experimental": {
+            "expandableHover": true
+          }
+        },
+        "typescript": {
+          "updateImportsOnFileMove.enabled": "prompt",
+          "suggestionActions.enabled": true,
+          "suggest.completeFunctionCalls": true,
+          "referencesCodeLens": {
+            "enabled": true,
+            "showOnAllFunctions": true
+          },
+          "implementationsCodeLens": {
+            "enabled": true,
+            "showOnInterfaceMethods": true
+          },
+          "tsserver": {
+            "experimental.enableProjectDiagnostics": true
+          },
+          "preferGoToSourceDefinition": true,
+          "inlayHints": {
+            "parameterNames": {
+              "enabled": "all",
+              "suppressWhenArgumentMatchesName": true
+            },
+            "parameterTypes": {
+              "enabled": true
+            },
+            "variableTypes": {
+              "enabled": true,
+              "suppressWhenTypeMatchesName": true
+            },
+            "propertyDeclarationTypes": {
+              "enabled": true
+            },
+            "functionLikeReturnTypes": {
+              "enabled": true
+            },
+            "enumMemberValues": {
+              "enabled": true
+            }
+          },
+          "preferences": {
+            "preferTypeOnlyAutoImports": true,
+            "autoImportSpecifierExcludeRegexes": ["^(node:)?os$"]
+          },
+          "experimental": {
+            "expandableHover": true
+          }
+        }
+      }
+    },
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "diagnosticMode": "openFilesOnly",
+          "inlayHints": {
+            "callArgumentNames": false
+          }
+        }
+      }
+    }
+  }
 }
