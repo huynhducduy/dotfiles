@@ -9,7 +9,6 @@
 {
   "auto_install_extensions": {
     "astro": true,
-    "basedpyright": true,
     "basher": true,
     "biome": true,
     "cspell": true,
@@ -45,7 +44,6 @@
     "r": true,
     "rainbow-csv": true,
     "ruby": true,
-    "ruff": true,
     "scala": true,
     "scss": true,
     "solidity": true,
