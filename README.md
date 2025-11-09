@@ -81,6 +81,12 @@ echo 'export PATH=/usr/local/mysql/bin:$PATH' >> ~/.zshrc
 mysql_secure_installation
 ```
 - Set `Keka` as default, enable finder extension
+- Set `CotEditor` as default plain text file openner
+```sh
+brew install duti
+duti -s com.coteditor.CotEditor public.plain-text all
+brew uninstall duti
+```
 - Import config for `Raycast`
 - Config `Logi Options`/`G Hub`
 - Config `Openkey`: modern icon, `ctrl + shift` to switch language
