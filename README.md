@@ -82,6 +82,7 @@ mysql_secure_installation
 ```
 - Set `Keka` as default, enable finder extension
 - Set `CotEditor` as default plain text file openner
+- Enable Touch ID for `sudo`: `mo touchid`
 ```sh
 brew install duti
 duti -s com.coteditor.CotEditor public.plain-text all
@@ -131,17 +132,5 @@ brew uninstall duti
 - Finder Settings
 - Messages: enable iCloud; Config on iPhone: Messages fowarding;
 - Contexts: Disable panel, Cmd Tab start Fast Search on typing
-- Chrome:
-	- Enable legacy extensions (MV2)
-
-```
-chrome://flags/#temporary-unexpire-flags-m137                     [Enabled]
-# Restart chrome, then
-chrome://flags/#extension-manifest-v2-deprecation-warning         [Disabled]
-chrome://flags/#extension-manifest-v2-deprecation-disabled        [Disabled]
-chrome://flags/#extension-manifest-v2-deprecation-unsupported     [Disabled]
-chrome://flags/#allow-legacy-mv2-extensions                       [Enabled]
-```
-
 - Install others awesome softwares: [Wiki](https://github.com/huynhducduy/dotfiles/wiki/Awesome-software-to-install)
 - Config `Kaleidoscope` integrations
