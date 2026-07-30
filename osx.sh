@@ -160,6 +160,9 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Re-enable subpixel antialiasing
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
+# do not open previous previewed files (e.g. PDFs) when opening a new one
+defaults write com.apple.Preview ApplePersistenceIgnoreState YES
+
 # Disable spotlight
 launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 mdutil -i off
