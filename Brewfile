@@ -78,6 +78,8 @@ brew "ffsend"
 brew "findutils"
 # Command-line tools for fly.io services
 brew "flyctl"
+# Tiny, open, embeddable, native coding agent
+brew "fx-agent"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
@@ -206,6 +208,8 @@ brew "procs"
 brew "pueue"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
+# Tools for and transforming and inspecting PDF files
+brew "qpdf"
 # AI-powered command-line workflow tool for developers
 brew "qwen-code"
 # Rsync for cloud storage
@@ -254,6 +258,8 @@ brew "vale"
 brew "vhs"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Unified toolchain and entry point for web development
+brew "vite-plus"
 # Execute commands when watched files change
 brew "watchexec"
 # Watch files and take action when they change
@@ -320,8 +326,6 @@ cask "claude"
 cask "claude-code"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
-# OpenAI's Codex desktop app for managing coding agents
-cask "codex-app"
 # Allows switching between application windows
 cask "contexts"
 # Plain-text editor for web pages, program source codes and more
@@ -364,6 +368,8 @@ cask "gcloud-cli"
 cask "ghostty"
 # Free and open-source image editor
 cask "gimp"
+# Native client for GitHub Copilot
+cask "github-copilot-app"
 # Web browser
 cask "google-chrome"
 # Web browser
@@ -372,6 +378,8 @@ cask "google-chrome@beta"
 cask "google-drive"
 # Grammarly for desktop
 cask "grammarly-desktop"
+# Extensible coding agent for the terminal
+cask "grok-build"
 # Open-source video transcoder
 cask "handbrake-app"
 # Speech to text application
@@ -388,8 +396,6 @@ cask "ipfs-desktop"
 cask "istherenet"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
 # File archiver
@@ -422,6 +428,8 @@ cask "microsoft-edge"
 cask "minisim"
 # Intercept, modify, replay, save HTTP/S traffic
 cask "mitmproxy"
+# Interactive terminal coding agent
+cask "muse-code"
 # Visual tool to design, develop and administer MySQL servers
 cask "mysqlworkbench"
 # Htop on steroids
@@ -478,6 +486,8 @@ cask "slack"
 cask "spotify"
 # Video game digital distribution service
 cask "steam"
+# Minimal GUI for AI code agents
+cask "t3-code"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Temperature monitoring, fan control and diagnostics
@@ -534,3 +544,15 @@ mas "Velja", id: 1607635845
 mas "Wappalyzer - Technology profiler", id: 1520333300
 mas "Wipr", id: 1662217862
 mas "Xcode", id: 497799835
+go "cmd/go"
+go "cmd/gofmt"
+uv "basedpyright"
+uv "ruff"
+uv "sqlfluff"
+npm "@antfu/ni"
+npm "eslint"
+npm "npq"
+npm "oxfmt"
+npm "oxlint"
+npm "prettier"
+npm "typescript"
