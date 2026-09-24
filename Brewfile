@@ -36,6 +36,8 @@ brew "broot"
 brew "btop"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # Cross-platform make
 brew "cmake"
 # Generates code snapshots in various formats
@@ -196,6 +198,8 @@ brew "ripgrep"
 brew "opencode"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# AI agent toolkit
+brew "pi-coding-agent"
 # CLI for the Pkl programming language
 brew "pkl"
 # PDF rendering library (based on the xpdf-3.0 code base)
@@ -318,8 +322,6 @@ cask "cap"
 cask "capcut"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# OpenAI's official browser with ChatGPT built in
-cask "chatgpt-atlas"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Terminal-based AI coding assistant
@@ -366,8 +368,6 @@ cask "fujifilm-tether-app"
 cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Free and open-source image editor
-cask "gimp"
 # Native client for GitHub Copilot
 cask "github-copilot-app"
 # Web browser
@@ -376,6 +376,8 @@ cask "google-chrome"
 cask "google-chrome@beta"
 # Client for the Google Drive storage service
 cask "google-drive"
+# Native desktop AI assistant from Google
+cask "google-gemini"
 # Grammarly for desktop
 cask "grammarly-desktop"
 # Extensible coding agent for the terminal
@@ -428,6 +430,8 @@ cask "microsoft-edge"
 cask "minisim"
 # Intercept, modify, replay, save HTTP/S traffic
 cask "mitmproxy"
+# AI assistant for managing tasks, projects, and long-term goals
+cask "muse"
 # Interactive terminal coding agent
 cask "muse-code"
 # Visual tool to design, develop and administer MySQL servers
@@ -444,8 +448,6 @@ cask "obs"
 cask "obsidian"
 # AI coding agent desktop client
 cask "opencode-desktop"
-# Vietnamese input system
-cask "openkey"
 # Web browser
 cask "opera"
 # Replacement for Docker Desktop
@@ -454,8 +456,6 @@ cask "orbstack"
 cask "orion"
 # Rhythm game
 cask "osu"
-# Utility to uninstall apps and remove leftover files from old/uninstalled apps
-cask "pearcleaner"
 # Sideload iOS apps and games
 cask "playcover-community"
 # HTTP debugging proxy
@@ -510,6 +510,8 @@ cask "vivaldi"
 cask "warp"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Vietnamese input method engine
+cask "xkey"
 # REST, GraphQL and gRPC client
 cask "yaak"
 # Messaging and calling application
